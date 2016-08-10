@@ -61,8 +61,7 @@
 		10AFEC3F1D5B15630010B311 /* voiceSpeaker */ = {
 			isa = PBXGroup;
 			children = (
-				10AFEC571D5B158B0010B311 /* SpeakerView.h */,
-				10AFEC581D5B158B0010B311 /* SpeakerView.m */,
+				10AFEC5B1D5B26780010B311 /* SpeakView */,
 				10AFEC431D5B15630010B311 /* AppDelegate.h */,
 				10AFEC441D5B15630010B311 /* AppDelegate.m */,
 				10AFEC461D5B15630010B311 /* ViewController.h */,
@@ -82,6 +81,15 @@
 				10AFEC411D5B15630010B311 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10AFEC5B1D5B26780010B311 /* SpeakView */ = {
+			isa = PBXGroup;
+			children = (
+				10AFEC571D5B158B0010B311 /* SpeakerView.h */,
+				10AFEC581D5B158B0010B311 /* SpeakerView.m */,
+			);
+			name = SpeakView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +314,7 @@
 				10AFEC561D5B15630010B311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

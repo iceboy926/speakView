@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    SpeakerView *vc = [[SpeakerView alloc] initWithFrame:CGRectMake(0, 0, 50, 100)];
+    SpeakerView *vc = [[SpeakerView alloc] initWithFrame:CGRectMake(0, 0, 60, 100)];
     
     vc.center = self.view.center;
     

@@ -6,8 +6,12 @@
 //  Copyright © 2016年 liuxin. All rights reserved.
 //
 
-#define TOTAL_NUM  16
+#define TOTAL_NUM  11
 #define degreesToRadians(x) (M_PI*(x)/180.0) //把角度转换成PI的方式
+
+#define Color(r,g,b)  [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+
+#define FillColor Color(100,200,200)
 
 #import "SpeakerView.h"
 
@@ -47,7 +51,7 @@
         
         [self addGestureRecognizer:longGesture];
         
-        voice = 1;
+        voice = TOTAL_NUM/2;
         blOver = YES;
         
         [self timerRefreshVoice:nil];
@@ -66,8 +70,8 @@
     
     topView.backgroundColor = [UIColor clearColor];
     topView.clipsToBounds = YES;
-    topView.layer.borderWidth = 0.5;
-    topView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    topView.layer.borderWidth = 4;
+    topView.layer.borderColor = FillColor.CGColor;
     topView.layer.cornerRadius = CGRectGetWidth(topView.frame)/2.0;
     
     [self addSubview:topView];
@@ -82,7 +86,7 @@
     CAShapeLayer *arcLayer = [CAShapeLayer layer];
     arcLayer.frame = CGRectMake(0, 0, CGRectGetWidth(bottomView.frame), CGRectGetHeight(bottomView.frame)/3.0);
     arcLayer.fillColor = [UIColor clearColor].CGColor;
-    arcLayer.strokeColor = [UIColor lightGrayColor].CGColor;
+    arcLayer.strokeColor = FillColor.CGColor;
     arcLayer.lineCap = kCALineCapRound;
     arcLayer.lineWidth = 8;
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetWidth(bottomView.frame)/2.0, 0) radius:CGRectGetWidth(bottomView.frame)/12.0*5.0 startAngle:degreesToRadians(180) endAngle:degreesToRadians(360) clockwise:NO];
@@ -94,8 +98,8 @@
     
     CAShapeLayer *vertialRectLayer = [CAShapeLayer layer];
     //vertialRectLayer.frame = CGRectMake(0, CGRectGetHeight(bottomView.frame)/3.0, CGRectGetWidth(bottomView.frame), CGRectGetHeight(bottomView.frame)/3.0);
-    vertialRectLayer.fillColor = [UIColor lightGrayColor].CGColor;
-    vertialRectLayer.strokeColor = [UIColor lightGrayColor].CGColor;
+    vertialRectLayer.fillColor = FillColor.CGColor;
+    vertialRectLayer.strokeColor = FillColor.CGColor;
     UIBezierPath *vertialPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(CGRectGetWidth(bottomView.frame)/2.0 - 4, CGRectGetWidth(bottomView.frame)/12.0*5.0, 8, CGRectGetHeight(bottomView.frame)/3.0) cornerRadius:4];
     
     vertialRectLayer.lineWidth = 1;
@@ -109,8 +113,8 @@
     
     CAShapeLayer *horizonialRectLayer = [CAShapeLayer layer];
     
-    horizonialRectLayer.fillColor = [UIColor lightGrayColor].CGColor;
-    horizonialRectLayer.strokeColor = [UIColor lightGrayColor].CGColor;
+    horizonialRectLayer.fillColor = FillColor.CGColor;
+    horizonialRectLayer.strokeColor = FillColor.CGColor;
     
     UIBezierPath *horizonPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, CGRectGetWidth(bottomView.frame)/12.0*5.0 + CGRectGetHeight(bottomView.frame)/3.0, CGRectGetWidth(bottomView.frame), 8) cornerRadius:2];
     
@@ -145,7 +149,7 @@
 {
     if(gesture.state == UIGestureRecognizerStateBegan)
     {
-        voice = 1;
+        voice = TOTAL_NUM/2;
         blOver = YES;
         
         timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(timerRefreshVoice:) userInfo:nil repeats:YES];
@@ -163,7 +167,7 @@
         {
             [timer invalidate];
             timer = nil;
-            voice = 1;
+            voice = TOTAL_NUM/2;
             blOver = YES;
             [self timerRefreshVoice:nil];
         }
@@ -202,7 +206,7 @@
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, CGRectGetHeight(topView.frame)-height, CGRectGetWidth(topView.frame), height) cornerRadius:0];
     _indicateLayer = [CAShapeLayer layer];
     _indicateLayer.path = path.CGPath;
-    _indicateLayer.fillColor = [UIColor lightGrayColor].CGColor;
+    _indicateLayer.fillColor = FillColor.CGColor;
     [topView.layer addSublayer:_indicateLayer];
 
 }
@@ -226,7 +230,7 @@
             }
             else
             {
-                layer.fillColor = [UIColor lightGrayColor].CGColor;
+                layer.fillColor = FillColor.CGColor;
             }
         }
     }
