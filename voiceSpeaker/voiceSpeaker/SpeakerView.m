@@ -6,7 +6,7 @@
 //  Copyright © 2016年 liuxin. All rights reserved.
 //
 
-#define TOTAL_NUM  8
+#define TOTAL_NUM  16
 #define degreesToRadians(x) (M_PI*(x)/180.0) //把角度转换成PI的方式
 
 #import "SpeakerView.h"
@@ -17,6 +17,8 @@
     UIView *bottomView;
     
     CAShapeLayer *_indicateLayer;
+    
+    NSMutableArray *indicateLayerArray;
     
     NSTimer *timer;
     NSInteger voice;
@@ -34,6 +36,9 @@
     if(self)
     {
         self.backgroundColor = [UIColor clearColor];
+        
+        indicateLayerArray = [NSMutableArray array];
+        
         [self setup];
         
         UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(LongPressGesture:)];
@@ -48,6 +53,7 @@
         [self timerRefreshVoice:nil];
         
     }
+
     
 
     
@@ -65,6 +71,8 @@
     topView.layer.cornerRadius = CGRectGetWidth(topView.frame)/2.0;
     
     [self addSubview:topView];
+    
+    [self addLayerArray];
     
     bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topView.frame) - CGRectGetHeight(self.bounds)/6.0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)/2.0)];
     
@@ -113,6 +121,25 @@
     
 }
 
+- (void)addLayerArray
+{
+    CGFloat layerHeight = CGRectGetHeight(topView.frame)/TOTAL_NUM;
+    
+    for (int i = 0; i < TOTAL_NUM; i++) {
+        
+        CGFloat y = CGRectGetHeight(topView.frame)-(i+1)*layerHeight;
+        
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, y, CGRectGetWidth(topView.frame), layerHeight) cornerRadius:0];
+        CAShapeLayer *Layer = [CAShapeLayer layer];
+        Layer.path = path.CGPath;
+        Layer.fillColor = self.backgroundColor.CGColor;
+        [topView.layer addSublayer:Layer];
+        [indicateLayerArray addObject:Layer];
+    }
+
+
+}
+
 
 - (void)LongPressGesture:(UILongPressGestureRecognizer *)gesture
 {
@@ -145,7 +172,7 @@
 
 - (void)timerRefreshVoice:(NSTimer *)time
 {
-    [self updateTopView:voice];
+    [self updateTopViewLayer:voice];
     
     if(voice == TOTAL_NUM-1)
     {
@@ -178,6 +205,31 @@
     _indicateLayer.fillColor = [UIColor lightGrayColor].CGColor;
     [topView.layer addSublayer:_indicateLayer];
 
+}
+
+- (void)updateTopViewLayer:(NSInteger)power
+{
+    for (int i = 0; i < TOTAL_NUM; i++) {
+        
+        CAShapeLayer *layer = [indicateLayerArray objectAtIndex:i];
+        
+        if(i > power)
+        {
+            layer.fillColor = self.backgroundColor.CGColor;
+        }
+        else
+        {
+        
+            if(i%2 == 0)
+            {
+                layer.fillColor = self.backgroundColor.CGColor;
+            }
+            else
+            {
+                layer.fillColor = [UIColor lightGrayColor].CGColor;
+            }
+        }
+    }
 }
 
 - (void)drawRect:(CGRect)rect
