@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1050D02A1D5C1E76002EF5CB /* CoreAnimationEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0291D5C1E76002EF5CB /* CoreAnimationEffect.m */; };
+		1050D02C1D5C1F42002EF5CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */; };
 		10AFEC421D5B15630010B311 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC411D5B15630010B311 /* main.m */; };
 		10AFEC451D5B15630010B311 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC441D5B15630010B311 /* AppDelegate.m */; };
 		10AFEC481D5B15630010B311 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC471D5B15630010B311 /* ViewController.m */; };
@@ -17,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1050D0281D5C1E76002EF5CB /* CoreAnimationEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationEffect.h; sourceTree = "<group>"; };
+		1050D0291D5C1E76002EF5CB /* CoreAnimationEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationEffect.m; sourceTree = "<group>"; };
+		1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		10AFEC3D1D5B15630010B311 /* voiceSpeaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voiceSpeaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AFEC411D5B15630010B311 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10AFEC431D5B15630010B311 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,15 +41,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1050D02C1D5C1F42002EF5CB /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1050D0271D5C1E32002EF5CB /* animationEffect */ = {
+			isa = PBXGroup;
+			children = (
+				1050D0281D5C1E76002EF5CB /* CoreAnimationEffect.h */,
+				1050D0291D5C1E76002EF5CB /* CoreAnimationEffect.m */,
+			);
+			name = animationEffect;
+			sourceTree = "<group>";
+		};
 		10AFEC341D5B15630010B311 = {
 			isa = PBXGroup;
 			children = (
+				1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */,
 				10AFEC3F1D5B15630010B311 /* voiceSpeaker */,
 				10AFEC3E1D5B15630010B311 /* Products */,
 			);
@@ -61,6 +77,7 @@
 		10AFEC3F1D5B15630010B311 /* voiceSpeaker */ = {
 			isa = PBXGroup;
 			children = (
+				1050D0271D5C1E32002EF5CB /* animationEffect */,
 				10AFEC5B1D5B26780010B311 /* SpeakView */,
 				10AFEC431D5B15630010B311 /* AppDelegate.h */,
 				10AFEC441D5B15630010B311 /* AppDelegate.m */,
@@ -166,6 +183,7 @@
 				10AFEC451D5B15630010B311 /* AppDelegate.m in Sources */,
 				10AFEC591D5B158B0010B311 /* SpeakerView.m in Sources */,
 				10AFEC421D5B15630010B311 /* main.m in Sources */,
+				1050D02A1D5C1E76002EF5CB /* CoreAnimationEffect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
