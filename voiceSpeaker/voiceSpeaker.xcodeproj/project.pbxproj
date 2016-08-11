@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1050D02A1D5C1E76002EF5CB /* CoreAnimationEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0291D5C1E76002EF5CB /* CoreAnimationEffect.m */; };
 		1050D02C1D5C1F42002EF5CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */; };
+		1050D0301D5C5207002EF5CB /* shadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D02F1D5C5207002EF5CB /* shadowView.m */; };
+		1050D0341D5C5741002EF5CB /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0331D5C5741002EF5CB /* ColorButton.m */; };
 		10AFEC421D5B15630010B311 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC411D5B15630010B311 /* main.m */; };
 		10AFEC451D5B15630010B311 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC441D5B15630010B311 /* AppDelegate.m */; };
 		10AFEC481D5B15630010B311 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC471D5B15630010B311 /* ViewController.m */; };
@@ -22,6 +24,10 @@
 		1050D0281D5C1E76002EF5CB /* CoreAnimationEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationEffect.h; sourceTree = "<group>"; };
 		1050D0291D5C1E76002EF5CB /* CoreAnimationEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationEffect.m; sourceTree = "<group>"; };
 		1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1050D02E1D5C5207002EF5CB /* shadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shadowView.h; sourceTree = "<group>"; };
+		1050D02F1D5C5207002EF5CB /* shadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shadowView.m; sourceTree = "<group>"; };
+		1050D0321D5C5741002EF5CB /* ColorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorButton.h; sourceTree = "<group>"; };
+		1050D0331D5C5741002EF5CB /* ColorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorButton.m; sourceTree = "<group>"; };
 		10AFEC3D1D5B15630010B311 /* voiceSpeaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voiceSpeaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AFEC411D5B15630010B311 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10AFEC431D5B15630010B311 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +63,24 @@
 			name = animationEffect;
 			sourceTree = "<group>";
 		};
+		1050D02D1D5C51CA002EF5CB /* shadowView */ = {
+			isa = PBXGroup;
+			children = (
+				1050D02E1D5C5207002EF5CB /* shadowView.h */,
+				1050D02F1D5C5207002EF5CB /* shadowView.m */,
+			);
+			name = shadowView;
+			sourceTree = "<group>";
+		};
+		1050D0311D5C572D002EF5CB /* ColorButton */ = {
+			isa = PBXGroup;
+			children = (
+				1050D0321D5C5741002EF5CB /* ColorButton.h */,
+				1050D0331D5C5741002EF5CB /* ColorButton.m */,
+			);
+			name = ColorButton;
+			sourceTree = "<group>";
+		};
 		10AFEC341D5B15630010B311 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +101,8 @@
 		10AFEC3F1D5B15630010B311 /* voiceSpeaker */ = {
 			isa = PBXGroup;
 			children = (
+				1050D0311D5C572D002EF5CB /* ColorButton */,
+				1050D02D1D5C51CA002EF5CB /* shadowView */,
 				1050D0271D5C1E32002EF5CB /* animationEffect */,
 				10AFEC5B1D5B26780010B311 /* SpeakView */,
 				10AFEC431D5B15630010B311 /* AppDelegate.h */,
@@ -181,8 +207,10 @@
 			files = (
 				10AFEC481D5B15630010B311 /* ViewController.m in Sources */,
 				10AFEC451D5B15630010B311 /* AppDelegate.m in Sources */,
+				1050D0341D5C5741002EF5CB /* ColorButton.m in Sources */,
 				10AFEC591D5B158B0010B311 /* SpeakerView.m in Sources */,
 				10AFEC421D5B15630010B311 /* main.m in Sources */,
+				1050D0301D5C5207002EF5CB /* shadowView.m in Sources */,
 				1050D02A1D5C1E76002EF5CB /* CoreAnimationEffect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
