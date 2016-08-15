@@ -13,6 +13,8 @@
 #import "UIAlertView+Block.h"
 #import "UIView+tapGesture.h"
 #import "XZLog.h"
+#import "NSObject+Caculator.h"
+#import "CaculateMaker.h"
 
 @interface ViewController ()
 
@@ -79,13 +81,21 @@ void uncaughtExceptionHandler(NSException *exception){
 
 - (void)onClickedBtn:(id)sender
 {
-    UIAlertView *view = [[UIAlertView alloc] initWithTitle:nil message:@"this is a message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//    UIAlertView *view = [[UIAlertView alloc] initWithTitle:nil message:@"this is a message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//    
+//    [view showAlertViewWithCompleteBlock:^(NSInteger buttonIndex){
+//    
+//        NSLog(@" clicked %d button", buttonIndex);
+//    
+//    }];
     
-    [view showAlertViewWithCompleteBlock:^(NSInteger buttonIndex){
-    
-        NSLog(@" clicked %d button", buttonIndex);
-    
+    int result = [NSObject makeCaculators:^(CaculateMaker *maker) {
+       
+        maker.add(5).add(4).add(1).sub(5).multi(2).div(5);
+        
     }];
+    
+    NSLog(@"result is %d", result);
 }
 
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1024F80E1D6158D9006F14F5 /* WMKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024F80D1D6158D9006F14F5 /* WMKeyChain.m */; };
+		1024F8121D618FC7006F14F5 /* NSObject+Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024F8111D618FC7006F14F5 /* NSObject+Caculator.m */; };
+		1024F8151D618FF0006F14F5 /* CaculateMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024F8141D618FF0006F14F5 /* CaculateMaker.m */; };
 		1050D02A1D5C1E76002EF5CB /* CoreAnimationEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0291D5C1E76002EF5CB /* CoreAnimationEffect.m */; };
 		1050D02C1D5C1F42002EF5CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */; };
 		1050D0301D5C5207002EF5CB /* shadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D02F1D5C5207002EF5CB /* shadowView.m */; };
@@ -25,6 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1024F80C1D6158D9006F14F5 /* WMKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyChain.h; sourceTree = "<group>"; };
+		1024F80D1D6158D9006F14F5 /* WMKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyChain.m; sourceTree = "<group>"; };
+		1024F8101D618FC7006F14F5 /* NSObject+Caculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Caculator.h"; sourceTree = "<group>"; };
+		1024F8111D618FC7006F14F5 /* NSObject+Caculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Caculator.m"; sourceTree = "<group>"; };
+		1024F8131D618FF0006F14F5 /* CaculateMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculateMaker.h; sourceTree = "<group>"; };
+		1024F8141D618FF0006F14F5 /* CaculateMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculateMaker.m; sourceTree = "<group>"; };
 		1050D0281D5C1E76002EF5CB /* CoreAnimationEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationEffect.h; sourceTree = "<group>"; };
 		1050D0291D5C1E76002EF5CB /* CoreAnimationEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationEffect.m; sourceTree = "<group>"; };
 		1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -66,6 +75,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1024F80B1D615890006F14F5 /* keyChain */ = {
+			isa = PBXGroup;
+			children = (
+				1024F80C1D6158D9006F14F5 /* WMKeyChain.h */,
+				1024F80D1D6158D9006F14F5 /* WMKeyChain.m */,
+			);
+			name = keyChain;
+			sourceTree = "<group>";
+		};
+		1024F80F1D618F4D006F14F5 /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				1024F8101D618FC7006F14F5 /* NSObject+Caculator.h */,
+				1024F8111D618FC7006F14F5 /* NSObject+Caculator.m */,
+				1024F8131D618FF0006F14F5 /* CaculateMaker.h */,
+				1024F8141D618FF0006F14F5 /* CaculateMaker.m */,
+			);
+			name = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
+		1024F8161D61A99E006F14F5 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				1024F80F1D618F4D006F14F5 /* ReactiveCocoa */,
+			);
+			name = MVVM;
+			sourceTree = "<group>";
+		};
 		1050D0271D5C1E32002EF5CB /* animationEffect */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +163,8 @@
 		10AFEC3F1D5B15630010B311 /* voiceSpeaker */ = {
 			isa = PBXGroup;
 			children = (
+				1024F8161D61A99E006F14F5 /* MVVM */,
+				1024F80B1D615890006F14F5 /* keyChain */,
 				10E38F411D5DBAC8009B396B /* CrashLog */,
 				1050D03C1D5C794D002EF5CB /* oc-runtime */,
 				1050D0311D5C572D002EF5CB /* ColorButton */,
@@ -241,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1024F8121D618FC7006F14F5 /* NSObject+Caculator.m in Sources */,
 				1050D03F1D5C7997002EF5CB /* NSObject+AssociatedObject.m in Sources */,
 				10AFEC481D5B15630010B311 /* ViewController.m in Sources */,
 				10AFEC451D5B15630010B311 /* AppDelegate.m in Sources */,
@@ -248,6 +288,8 @@
 				10AFEC591D5B158B0010B311 /* SpeakerView.m in Sources */,
 				10AFEC421D5B15630010B311 /* main.m in Sources */,
 				10E38F401D5D7770009B396B /* UIView+tapGesture.m in Sources */,
+				1024F8151D618FF0006F14F5 /* CaculateMaker.m in Sources */,
+				1024F80E1D6158D9006F14F5 /* WMKeyChain.m in Sources */,
 				10E38F441D5DBADA009B396B /* XZLog.m in Sources */,
 				1050D0421D5C7D69002EF5CB /* UIAlertView+Block.m in Sources */,
 				1050D0301D5C5207002EF5CB /* shadowView.m in Sources */,
