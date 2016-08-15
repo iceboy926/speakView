@@ -20,6 +20,8 @@
 		10AFEC4D1D5B15630010B311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10AFEC4C1D5B15630010B311 /* Assets.xcassets */; };
 		10AFEC501D5B15630010B311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10AFEC4E1D5B15630010B311 /* LaunchScreen.storyboard */; };
 		10AFEC591D5B158B0010B311 /* SpeakerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC581D5B158B0010B311 /* SpeakerView.m */; };
+		10E38F401D5D7770009B396B /* UIView+tapGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E38F3F1D5D7770009B396B /* UIView+tapGesture.m */; };
+		10E38F441D5DBADA009B396B /* XZLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E38F431D5DBADA009B396B /* XZLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,10 @@
 		10AFEC511D5B15630010B311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10AFEC571D5B158B0010B311 /* SpeakerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerView.h; sourceTree = "<group>"; };
 		10AFEC581D5B158B0010B311 /* SpeakerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerView.m; sourceTree = "<group>"; };
+		10E38F3E1D5D7770009B396B /* UIView+tapGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+tapGesture.h"; sourceTree = "<group>"; };
+		10E38F3F1D5D7770009B396B /* UIView+tapGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+tapGesture.m"; sourceTree = "<group>"; };
+		10E38F421D5DBADA009B396B /* XZLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZLog.h; sourceTree = "<group>"; };
+		10E38F431D5DBADA009B396B /* XZLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 				1050D0411D5C7D69002EF5CB /* UIAlertView+Block.m */,
 				1050D03D1D5C7997002EF5CB /* NSObject+AssociatedObject.h */,
 				1050D03E1D5C7997002EF5CB /* NSObject+AssociatedObject.m */,
+				10E38F3E1D5D7770009B396B /* UIView+tapGesture.h */,
+				10E38F3F1D5D7770009B396B /* UIView+tapGesture.m */,
 			);
 			name = "oc-runtime";
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 		10AFEC3F1D5B15630010B311 /* voiceSpeaker */ = {
 			isa = PBXGroup;
 			children = (
+				10E38F411D5DBAC8009B396B /* CrashLog */,
 				1050D03C1D5C794D002EF5CB /* oc-runtime */,
 				1050D0311D5C572D002EF5CB /* ColorButton */,
 				1050D02D1D5C51CA002EF5CB /* shadowView */,
@@ -151,6 +160,15 @@
 				10AFEC581D5B158B0010B311 /* SpeakerView.m */,
 			);
 			name = SpeakView;
+			sourceTree = "<group>";
+		};
+		10E38F411D5DBAC8009B396B /* CrashLog */ = {
+			isa = PBXGroup;
+			children = (
+				10E38F421D5DBADA009B396B /* XZLog.h */,
+				10E38F431D5DBADA009B396B /* XZLog.m */,
+			);
+			name = CrashLog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +247,8 @@
 				1050D0341D5C5741002EF5CB /* ColorButton.m in Sources */,
 				10AFEC591D5B158B0010B311 /* SpeakerView.m in Sources */,
 				10AFEC421D5B15630010B311 /* main.m in Sources */,
+				10E38F401D5D7770009B396B /* UIView+tapGesture.m in Sources */,
+				10E38F441D5DBADA009B396B /* XZLog.m in Sources */,
 				1050D0421D5C7D69002EF5CB /* UIAlertView+Block.m in Sources */,
 				1050D0301D5C5207002EF5CB /* shadowView.m in Sources */,
 				1050D02A1D5C1E76002EF5CB /* CoreAnimationEffect.m in Sources */,
