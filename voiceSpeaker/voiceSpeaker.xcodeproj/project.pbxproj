@@ -16,6 +16,7 @@
 		1050D0341D5C5741002EF5CB /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0331D5C5741002EF5CB /* ColorButton.m */; };
 		1050D03F1D5C7997002EF5CB /* NSObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D03E1D5C7997002EF5CB /* NSObject+AssociatedObject.m */; };
 		1050D0421D5C7D69002EF5CB /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0411D5C7D69002EF5CB /* UIAlertView+Block.m */; };
+		10AB04F41D62B73B0008A9DD /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10AB04F31D62B73B0008A9DD /* ReactiveCocoa.framework */; };
 		10AFEC421D5B15630010B311 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC411D5B15630010B311 /* main.m */; };
 		10AFEC451D5B15630010B311 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC441D5B15630010B311 /* AppDelegate.m */; };
 		10AFEC481D5B15630010B311 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC471D5B15630010B311 /* ViewController.m */; };
@@ -45,6 +46,7 @@
 		1050D03E1D5C7997002EF5CB /* NSObject+AssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObject.m"; sourceTree = "<group>"; };
 		1050D0401D5C7D69002EF5CB /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
 		1050D0411D5C7D69002EF5CB /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
+		10AB04F31D62B73B0008A9DD /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = voiceSpeaker/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		10AFEC3D1D5B15630010B311 /* voiceSpeaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voiceSpeaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AFEC411D5B15630010B311 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10AFEC431D5B15630010B311 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10AB04F41D62B73B0008A9DD /* ReactiveCocoa.framework in Frameworks */,
 				1050D02C1D5C1F42002EF5CB /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +149,7 @@
 		10AFEC341D5B15630010B311 = {
 			isa = PBXGroup;
 			children = (
+				10AB04F31D62B73B0008A9DD /* ReactiveCocoa.framework */,
 				1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */,
 				10AFEC3F1D5B15630010B311 /* voiceSpeaker */,
 				10AFEC3E1D5B15630010B311 /* Products */,
@@ -405,6 +409,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/voiceSpeaker",
+				);
 				INFOPLIST_FILE = voiceSpeaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mit.voiceSpeaker;
@@ -416,6 +424,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/voiceSpeaker",
+				);
 				INFOPLIST_FILE = voiceSpeaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mit.voiceSpeaker;
