@@ -101,8 +101,6 @@ void uncaughtExceptionHandler(NSException *exception){
     
     NSLog(@"result is %d", result);
     
-    
-
     //[self performSegueWithIdentifier:@"goNext" sender:self];
     
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
