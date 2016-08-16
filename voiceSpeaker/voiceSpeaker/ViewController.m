@@ -15,6 +15,8 @@
 #import "XZLog.h"
 #import "NSObject+Caculator.h"
 #import "CaculateMaker.h"
+#import "reactiveVC.h"
+#import "CocoaViewController.h"
 
 @interface ViewController ()
 
@@ -59,6 +61,8 @@ void uncaughtExceptionHandler(NSException *exception){
     [view setTapGesture:^{
     
         NSLog(@"view tap gesture");
+        
+        [self performSegueWithIdentifier:@"goNext" sender:self];
     
     }];
     
@@ -96,6 +100,27 @@ void uncaughtExceptionHandler(NSException *exception){
     }];
     
     NSLog(@"result is %d", result);
+    
+    
+
+    //[self performSegueWithIdentifier:@"goNext" sender:self];
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    CocoaViewController *cocoaVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CocoaVC"];
+    cocoaVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    [self presentViewController:cocoaVC animated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"goNext"])
+    {
+        reactiveVC *active = segue.destinationViewController;
+        
+        active.name = @"storyboard name";
+    }
 }
 
 
