@@ -17,6 +17,7 @@
 #import "CaculateMaker.h"
 #import "reactiveVC.h"
 #import "CocoaViewController.h"
+#import "Product_Custom.h"
 
 @interface ViewController ()
 
@@ -44,6 +45,8 @@ void uncaughtExceptionHandler(NSException *exception){
     // 测试用例
     FDLog(@"header", @"iOS", @"抢先预定了喂");
     
+    Product_Custom *pC = [[Product_Custom alloc] init];
+    [pC product_cunstom_test];
     
     
     

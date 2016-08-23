@@ -9,6 +9,7 @@
 #import "reactiveVC.h"
 #import "UIColor+Extend.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "CocoaViewController.h"
 
 
 
@@ -47,11 +48,32 @@
     [actionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     actionButton.layer.masksToBounds = YES;
     actionButton.layer.cornerRadius = 5;
-    [actionButton addTarget:self action:@selector(actionBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    //[actionButton addTarget:self action:@selector(actionBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     self.loginBtn = actionButton;
     
     [self.view addSubview:actionButton];
+    
+    
+    //target-action
+    self.loginBtn.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        
+        NSLog(@" logint btn");
+        
+        //[self dismissViewControllerAnimated:YES completion:nil];
+        
+        UIStoryboard *mainStore = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        CocoaViewController *cocoaVC = [mainStore instantiateViewControllerWithIdentifier:@"CocoaVC"];
+        
+        [self presentViewController:cocoaVC animated:YES completion:^{
+        
+        
+        }];
+    
+        
+        return [RACSignal empty];
+    }];
     
     
     
