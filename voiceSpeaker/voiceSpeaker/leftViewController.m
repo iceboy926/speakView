@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"leftbackiamge"]];
     
     // 创建dataSource
     NSArray *array = @[@"menu1",@"menu2",@"menu3",@"menu4",@"menu5",@"menu6",@"menu7",@"menu8",@"menu9",@"menu10"];
@@ -36,21 +36,22 @@
     table = [[UITableView alloc] initWithFrame:rectframe];
     table.delegate = self;
     table.dataSource = self;
+    table.backgroundColor = [UIColor clearColor];
     
     [self.view addSubview:table];
     
     
-        NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
-        ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(0, 0, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
-        [btn setTitle:@"测试button" forState:UIControlStateNormal];
-    
-        [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
-    //    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //    btn.layer.shadowOffset = CGSizeMake(3, 3);
-    //    btn.layer.shadowColor = [UIColor grayColor].CGColor;
-    //    btn.layer.shadowOpacity = 0.8;
-    
-        [self.view addSubview:btn];
+//        NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
+//        ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(0, 0, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
+//        [btn setTitle:@"测试button" forState:UIControlStateNormal];
+//    
+//        [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
+//    //    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    //    btn.layer.shadowOffset = CGSizeMake(3, 3);
+//    //    btn.layer.shadowColor = [UIColor grayColor].CGColor;
+//    //    btn.layer.shadowOpacity = 0.8;
+//    
+//        [self.view addSubview:btn];
     
     
 
@@ -95,13 +96,13 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     
-    cell.backgroundColor = [UIColor brownColor];
+    cell.backgroundColor = [UIColor clearColor];
     
     //cell.selectionStyle = UITableViewCellAccessoryNone;
     
     cell.textLabel.text = self.dataSource[indexPath.row];
     
-    cell.textLabel.textColor = [UIColor redColor];
+    //cell.textLabel.textColor = [UIColor redColor];
     NSLog(@"cell text is %@", cell.textLabel.text);
     return cell;
 }

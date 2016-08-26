@@ -14,4 +14,6 @@ typedef void(^BlockMenu)(UIViewController *vc);
 
 @property (nonatomic, copy) BlockMenu blockmenu;
 
+@property (nonatomic, copy) void (^leftblock)(id sender);
+
 @end

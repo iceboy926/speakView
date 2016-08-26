@@ -103,6 +103,11 @@
     {
         _blockmenu(nextVc);
     }
+    
+//    if(_leftblock)
+//    {
+//        _leftblock(tableView);
+//    }
 //    [self.navigationController pushViewController:nextVc animated:YES];
 //    // 设置关闭左侧菜单回到不偏移的MainMenu位置
 //    [self.menu closeLeftMenuView];

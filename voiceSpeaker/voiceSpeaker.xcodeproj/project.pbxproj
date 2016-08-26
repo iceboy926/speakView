@@ -28,6 +28,8 @@
 		1050F04A1D6EE7EF00172460 /* choose.png in Resources */ = {isa = PBXBuildFile; fileRef = 1050F0481D6EE7EF00172460 /* choose.png */; };
 		108D56AA1D6A95810021F7D6 /* Product_Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 108D56A91D6A95810021F7D6 /* Product_Custom.m */; };
 		10A1B5411D6C244700A3078D /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A1B5401D6C244700A3078D /* Data.m */; };
+		10A9E7841D703E6B002551BE /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A9E7811D703E6B002551BE /* LeftSlideViewController.m */; };
+		10A9E7851D703E6B002551BE /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A9E7831D703E6B002551BE /* UIView_extra.m */; };
 		10AB04F81D62BA070008A9DD /* reactiveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB04F71D62BA070008A9DD /* reactiveVC.m */; };
 		10AB04FB1D62BBBB0008A9DD /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB04FA1D62BBBB0008A9DD /* UIColor+Extend.m */; };
 		10AB04FE1D62E7970008A9DD /* CocoaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB04FD1D62E7970008A9DD /* CocoaViewController.m */; };
@@ -132,6 +134,8 @@
 		10AFEC591D5B158B0010B311 /* SpeakerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC581D5B158B0010B311 /* SpeakerView.m */; };
 		10C00BFD1D6FE52900659ED3 /* leftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00BFC1D6FE52900659ED3 /* leftView.m */; };
 		10C00BFF1D6FF03200659ED3 /* leftbackiamge.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C00BFE1D6FF03200659ED3 /* leftbackiamge.png */; };
+		10C00C031D70177A00659ED3 /* NSArray+swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00C021D70177A00659ED3 /* NSArray+swizzle.m */; };
+		10C00C081D7022F200659ED3 /* leftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00C071D7022F200659ED3 /* leftViewController.m */; };
 		10E38F401D5D7770009B396B /* UIView+tapGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E38F3F1D5D7770009B396B /* UIView+tapGesture.m */; };
 		10E38F441D5DBADA009B396B /* XZLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E38F431D5DBADA009B396B /* XZLog.m */; };
 /* End PBXBuildFile section */
@@ -175,6 +179,10 @@
 		108D56A91D6A95810021F7D6 /* Product_Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product_Custom.m; sourceTree = "<group>"; };
 		10A1B53F1D6C244700A3078D /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		10A1B5401D6C244700A3078D /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		10A9E7801D703E6B002551BE /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftSlideViewController.h; path = LeftSlideViewController/LeftSlideViewController.h; sourceTree = "<group>"; };
+		10A9E7811D703E6B002551BE /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftSlideViewController.m; path = LeftSlideViewController/LeftSlideViewController.m; sourceTree = "<group>"; };
+		10A9E7821D703E6B002551BE /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIView_extra.h; path = LeftSlideViewController/UIView_extra.h; sourceTree = "<group>"; };
+		10A9E7831D703E6B002551BE /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIView_extra.m; path = LeftSlideViewController/UIView_extra.m; sourceTree = "<group>"; };
 		10AB04F61D62BA070008A9DD /* reactiveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reactiveVC.h; sourceTree = "<group>"; };
 		10AB04F71D62BA070008A9DD /* reactiveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = reactiveVC.m; sourceTree = "<group>"; };
 		10AB04F91D62BBBB0008A9DD /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
@@ -387,6 +395,11 @@
 		10C00BFB1D6FE52900659ED3 /* leftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftView.h; sourceTree = "<group>"; };
 		10C00BFC1D6FE52900659ED3 /* leftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftView.m; sourceTree = "<group>"; };
 		10C00BFE1D6FF03200659ED3 /* leftbackiamge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftbackiamge.png; sourceTree = "<group>"; };
+		10C00C011D70177A00659ED3 /* NSArray+swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+swizzle.h"; sourceTree = "<group>"; };
+		10C00C021D70177A00659ED3 /* NSArray+swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+swizzle.m"; sourceTree = "<group>"; };
+		10C00C041D7020B100659ED3 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = voiceSpeaker/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		10C00C061D7022F200659ED3 /* leftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftViewController.h; sourceTree = "<group>"; };
+		10C00C071D7022F200659ED3 /* leftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftViewController.m; sourceTree = "<group>"; };
 		10E38F3E1D5D7770009B396B /* UIView+tapGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+tapGesture.h"; sourceTree = "<group>"; };
 		10E38F3F1D5D7770009B396B /* UIView+tapGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+tapGesture.m"; sourceTree = "<group>"; };
 		10E38F421D5DBADA009B396B /* XZLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZLog.h; sourceTree = "<group>"; };
@@ -527,6 +540,17 @@
 				10256EB61D6DA14700D136CF /* background@2x.png */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		10A9E77F1D703E4B002551BE /* LeftSlideVC */ = {
+			isa = PBXGroup;
+			children = (
+				10A9E7801D703E6B002551BE /* LeftSlideViewController.h */,
+				10A9E7811D703E6B002551BE /* LeftSlideViewController.m */,
+				10A9E7821D703E6B002551BE /* UIView_extra.h */,
+				10A9E7831D703E6B002551BE /* UIView_extra.m */,
+			);
+			name = LeftSlideVC;
 			sourceTree = "<group>";
 		};
 		10AB04F51D62B9D90008A9DD /* ReactiveCocoa */ = {
@@ -765,7 +789,6 @@
 		10AFEC341D5B15630010B311 = {
 			isa = PBXGroup;
 			children = (
-				1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */,
 				10AFEC3F1D5B15630010B311 /* voiceSpeaker */,
 				10AFEC3E1D5B15630010B311 /* Products */,
 				D441EC58CEC656251B39578F /* Frameworks */,
@@ -783,6 +806,8 @@
 		10AFEC3F1D5B15630010B311 /* voiceSpeaker */ = {
 			isa = PBXGroup;
 			children = (
+				10A9E77F1D703E4B002551BE /* LeftSlideVC */,
+				10C00C001D70160100659ED3 /* Method Swizzling */,
 				10256E9F1D6D9A0E00D136CF /* SlideMenu */,
 				10256E9B1D6D37F900D136CF /* Archive&&unArchive */,
 				108D56AB1D6AA7190021F7D6 /* Realm */,
@@ -804,6 +829,8 @@
 				10AFEC491D5B15630010B311 /* Main.storyboard */,
 				10C00BFB1D6FE52900659ED3 /* leftView.h */,
 				10C00BFC1D6FE52900659ED3 /* leftView.m */,
+				10C00C061D7022F200659ED3 /* leftViewController.h */,
+				10C00C071D7022F200659ED3 /* leftViewController.m */,
 				10256EB01D6D9F5D00D136CF /* rightViewController.h */,
 				10256EB11D6D9F5D00D136CF /* rightViewController.m */,
 				10AFEC4C1D5B15630010B311 /* Assets.xcassets */,
@@ -832,6 +859,15 @@
 			name = SpeakView;
 			sourceTree = "<group>";
 		};
+		10C00C001D70160100659ED3 /* Method Swizzling */ = {
+			isa = PBXGroup;
+			children = (
+				10C00C011D70177A00659ED3 /* NSArray+swizzle.h */,
+				10C00C021D70177A00659ED3 /* NSArray+swizzle.m */,
+			);
+			name = "Method Swizzling";
+			sourceTree = "<group>";
+		};
 		10E38F411D5DBAC8009B396B /* CrashLog */ = {
 			isa = PBXGroup;
 			children = (
@@ -844,6 +880,8 @@
 		D441EC58CEC656251B39578F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */,
+				10C00C041D7020B100659ED3 /* ReactiveCocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -985,6 +1023,7 @@
 				10AFEC591D5B158B0010B311 /* SpeakerView.m in Sources */,
 				10AB05DC1D6301D20008A9DD /* RACDisposable.m in Sources */,
 				10AB05D21D6301D20008A9DD /* NSUserDefaults+RACSupport.m in Sources */,
+				10A9E7841D703E6B002551BE /* LeftSlideViewController.m in Sources */,
 				10AB06041D6301D20008A9DD /* RACValueTransformer.m in Sources */,
 				10AB060C1D6301D20008A9DD /* UIDatePicker+RACSignalSupport.m in Sources */,
 				10AB05C81D6301D20008A9DD /* NSObject+RACKVOWrapper.m in Sources */,
@@ -998,6 +1037,7 @@
 				10AB05D31D6301D20008A9DD /* RACArraySequence.m in Sources */,
 				1024F8151D618FF0006F14F5 /* CaculateMaker.m in Sources */,
 				10AB05C61D6301D20008A9DD /* NSObject+RACDeallocating.m in Sources */,
+				10A9E7851D703E6B002551BE /* UIView_extra.m in Sources */,
 				10AB05FC1D6301D20008A9DD /* RACSubscriptingAssignmentTrampoline.m in Sources */,
 				10AB05FD1D6301D20008A9DD /* RACSubscriptionScheduler.m in Sources */,
 				10AB05C21D6301D20008A9DD /* NSFileHandle+RACSupport.m in Sources */,
@@ -1005,6 +1045,7 @@
 				10256EB21D6D9F5D00D136CF /* rightViewController.m in Sources */,
 				1024F80E1D6158D9006F14F5 /* WMKeyChain.m in Sources */,
 				10AB05C51D6301D20008A9DD /* NSNotificationCenter+RACSupport.m in Sources */,
+				10C00C081D7022F200659ED3 /* leftViewController.m in Sources */,
 				10AB04FB1D62BBBB0008A9DD /* UIColor+Extend.m in Sources */,
 				10AB06051D6301D20008A9DD /* UIActionSheet+RACSignalSupport.m in Sources */,
 				10E38F441D5DBADA009B396B /* XZLog.m in Sources */,
@@ -1022,6 +1063,7 @@
 				10AB05FF1D6301D20008A9DD /* RACTestScheduler.m in Sources */,
 				10AB05DB1D6301D20008A9DD /* RACDelegateProxy.m in Sources */,
 				10AB05E71D6301D20008A9DD /* RACKVOChannel.m in Sources */,
+				10C00C031D70177A00659ED3 /* NSArray+swizzle.m in Sources */,
 				10AB05EC1D6301D20008A9DD /* RACPassthroughSubscriber.m in Sources */,
 				10AB06091D6301D20008A9DD /* UICollectionReusableView+RACSignalSupport.m in Sources */,
 				10AB06001D6301D20008A9DD /* RACTuple.m in Sources */,

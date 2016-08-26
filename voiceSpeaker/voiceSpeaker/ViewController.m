@@ -21,10 +21,16 @@
 #import "ObjectArchive.h"
 #import "WJSlideMenu.h"
 #import "leftView.h"
+#import "NSArray+swizzle.h"
+#import <objc/runtime.h>
+#import "LeftSlideViewController.h"
+#import "leftViewController.h"
+
 
 @interface ViewController ()
 {
     WJSlideMenu *slideMenu;
+    LeftSlideViewController *leftSlideMenu;
 }
 
 @end
@@ -102,6 +108,11 @@ void uncaughtExceptionHandler(NSException *exception){
         [slideMenu closeLeftMenuView];
     
     };
+    
+    left.leftblock = ^(id sender){
+    
+        NSLog(@"sender is %@", sender);
+    };
 
     
 //    rightViewController *rightView = [[rightViewController alloc] init];
@@ -117,7 +128,7 @@ void uncaughtExceptionHandler(NSException *exception){
     
     //self.view.backgroundColor = [UIColor clearColor];
     
-    [self setupSlide];
+     //[self setupSlide];
     
     
     //Set ExceptionHandler
@@ -144,33 +155,33 @@ void uncaughtExceptionHandler(NSException *exception){
 //    [self.view addSubview:vc];
 //    
 //    
-//    shadowView *view = [[shadowView alloc] initWithFrame:CGRectMake(100, 120, 100,100)];
-//    view.backgroundColor = [UIColor clearColor];
-//    [self.view addSubview:view];
-//    
-//    [view setTapGesture:^{
-//    
-//        NSLog(@"view tap gesture");
-//        
-//        [self performSegueWithIdentifier:@"goNext" sender:self];
-//    
-//    }];
-//    
+    shadowView *view = [[shadowView alloc] initWithFrame:CGRectMake(100, 120, 100,100)];
+    view.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:view];
+    
+    [view setTapGesture:^{
+    
+        NSLog(@"view tap gesture");
+        
+        [self performSegueWithIdentifier:@"goNext" sender:self];
+    
+    }];
+//
 //    SEL sel = @selector(onClickedBtn:);
 //    NSLog(@" SEL : %p", sel);
 //    
 //    
-//    NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
-//    ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(100, 200, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
-//    [btn setTitle:@"测试button" forState:UIControlStateNormal];
-//    
-//    [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
-////    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-////    btn.layer.shadowOffset = CGSizeMake(3, 3);
-////    btn.layer.shadowColor = [UIColor grayColor].CGColor;
-////    btn.layer.shadowOpacity = 0.8;
-//    
-//    [self.view addSubview:btn];
+    NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
+    ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(100, 200, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
+    [btn setTitle:@"测试button" forState:UIControlStateNormal];
+    
+    [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
+//    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    btn.layer.shadowOffset = CGSizeMake(3, 3);
+//    btn.layer.shadowColor = [UIColor grayColor].CGColor;
+//    btn.layer.shadowOpacity = 0.8;
+    
+    [self.view addSubview:btn];
     
     
     ObjectArchive *object = [[ObjectArchive alloc] initWithName:@"Joke" Age:@"123" Career:@"engineer"];
@@ -185,6 +196,23 @@ void uncaughtExceptionHandler(NSException *exception){
     
     NSLog(@"name is %@, age is %@, career is %@", objectCopy.ObjectName, objectCopy.ObjectAge, objectCopy.ObjectCareer);
     
+   
+    
+}
+
+- (void)testSwizzle
+{
+    @autoreleasepool {
+        
+        Method ori_Method =  class_getInstanceMethod([NSArray class], @selector(lastObject));
+        Method my_Method = class_getInstanceMethod([NSArray class], @selector(myLastObject));
+        method_exchangeImplementations(ori_Method, my_Method);
+        
+        NSArray *array = @[@"0",@"1",@"2",@"3"];
+        NSString *string = [array lastObject];
+        NSLog(@"TEST RESULT : %@",string);
+        
+    }
 }
 
 - (void)onClickedBtn:(id)sender
@@ -212,7 +240,11 @@ void uncaughtExceptionHandler(NSException *exception){
     CocoaViewController *cocoaVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CocoaVC"];
     cocoaVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
-    [self presentViewController:cocoaVC animated:YES completion:nil];
+    leftViewController *leftView = [[leftViewController alloc] init];
+    
+    leftSlideMenu = [[LeftSlideViewController alloc] initWithLeftView:leftView andMainView:cocoaVC];
+    
+    [self presentViewController:leftSlideMenu animated:YES completion:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -32,31 +32,31 @@
     
     // Override point for customization after application launch.
 //    
-//    leftViewController *left = [[leftViewController alloc] init];
-//    rightViewController *right = [[rightViewController alloc] init];
+    leftViewController *left = [[leftViewController alloc] init];
+    rightViewController *right = [[rightViewController alloc] init];
 //    
-    
-//    
-//    RXLSideSlipViewController *RXL = [[RXLSideSlipViewController alloc] initWithContentViewController:viewContro leftMenuViewController:left rightMenuViewController:right];
-//    
-//    
-//    //RXL.backgroundImage = [UIImage imageNamed:@"aaa.png"];
-//    //RXL.delegate = self;
-//    
-//    RXL.menuPreferredStatusBarStyle = 1; // UIStatusBarStyleLightContent
-//    RXL.contentViewShadowColor = [UIColor whiteColor];
-//    RXL.contentViewShadowOffset = CGSizeMake(0, 0);
-//    RXL.contentViewShadowOpacity = 0.6;
-//    RXL.contentViewShadowRadius = 12;
-//    RXL.contentViewShadowEnabled = NO; // 是否显示阴影
-//    RXL.contentPrefersStatusBarHidden = NO;//是否隐藏主视图的状态条
-    
     ViewController *viewContro = [[ViewController alloc] init];
 //    
-    UINavigationController *navigate = [[UINavigationController alloc] initWithRootViewController:viewContro];
+    RXLSideSlipViewController *RXL = [[RXLSideSlipViewController alloc] initWithContentViewController:viewContro leftMenuViewController:left rightMenuViewController:right];
+//    
+//    
+    RXL.backgroundImage = [UIImage imageNamed:@"leftbackiamge"];
+//    //RXL.delegate = self;
+//    
+    RXL.menuPreferredStatusBarStyle = 1; // UIStatusBarStyleLightContent
+    RXL.contentViewShadowColor = [UIColor whiteColor];
+    RXL.contentViewShadowOffset = CGSizeMake(0, 0);
+    RXL.contentViewShadowOpacity = 0.6;
+    RXL.contentViewShadowRadius = 12;
+    RXL.contentViewShadowEnabled = NO; // 是否显示阴影
+    RXL.contentPrefersStatusBarHidden = NO;//是否隐藏主视图的状态条
     
     
-    self.window.rootViewController = navigate;
+//    
+//    UINavigationController *navigate = [[UINavigationController alloc] initWithRootViewController:viewContro];
+    
+    
+    self.window.rootViewController = viewContro;
     
 //    WWSideslipViewController * slide = [[WWSideslipViewController alloc]initWithLeftView:left andMainView:viewContro andRightView:right andBackgroundImage:[UIImage imageNamed:@"background"]];
 //    
@@ -71,15 +71,15 @@
     
     
 //    DDMenuController*ddMenu = [[DDMenuController alloc] initWithRootViewController:viewContro];
-//    
-//    //SideslipViewController *left = [[SideslipViewController alloc] init];
+////    
+////
 //    ddMenu.leftViewController = left;
-//    
-//    //SideslipRightViewController *right = [[SideslipRightViewController alloc] init];
+////    
+////
 //    ddMenu.rightViewController = right;
-//    
+////    
 //    UINavigationController *navigate = [[UINavigationController alloc] initWithRootViewController:ddMenu];
-//    
+////    
 //    self.window.rootViewController = navigate;
     
     return YES;
