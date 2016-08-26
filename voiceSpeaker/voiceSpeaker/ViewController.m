@@ -18,8 +18,15 @@
 #import "reactiveVC.h"
 #import "CocoaViewController.h"
 #import "Product_Custom.h"
+#import "ObjectArchive.h"
+#import "WJSlideMenu.h"
+#import "leftViewController.h"
+#import "rightViewController.h"
 
 @interface ViewController ()
+{
+    WJSlideMenu *slideMenu;
+}
 
 @end
 
@@ -29,61 +36,148 @@ void uncaughtExceptionHandler(NSException *exception){
     [XZLog logCrash:exception];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
+
+- (void)setupSlide
+{
+    // 创建slideMenu
+    CGRect frame = self.view.bounds;
+    WJSlideMenu *menu = [[WJSlideMenu alloc]initWithFrame:frame];
+    menu.backgroundColor = [UIColor whiteColor];
+    [menu addSwipeGesture];// 添加左右滑动手势
+    [self.view addSubview:menu];
+    slideMenu = menu;
+    
+    
+    
+    // ******************** 根据自身需求布局页面 *******************
+    
+    // 可选设置
+    menu.leftMovex = 180; //不设置默认是200
+    //menu.rightMovex = 220;//不设置默认是200
+    
+    // 根据需求自定义修改navLeftBtn
+    [slideMenu.navLeftBtn setImage:[UIImage imageNamed:@"choose"] forState:UIControlStateNormal];
+    slideMenu.navLeftBtn.backgroundColor = [UIColor clearColor];
+    slideMenu.navLeftBtn.imageEdgeInsets = UIEdgeInsetsMake(12, 20, 13, 20);
+    
+    
+//    // 根据需求自定义修改navRigthBtn
+//    [slideMenu.navRigthBtn setImage:[UIImage imageNamed:@"addMore"] forState:UIControlStateNormal];
+//    slideMenu.navRigthBtn.backgroundColor = [UIColor clearColor];
+//    slideMenu.navRigthBtn.imageEdgeInsets = UIEdgeInsetsMake(12, 20, 13, 20);
+    
+    
+    
+    // 根据需求自定义修改navBgView titleView 等等
+    slideMenu.navBgView.backgroundColor = [UIColor colorWithRed:124 green:234 blue:222 alpha:0.7];
+    slideMenu.titleView.backgroundColor = [UIColor clearColor];
+    //slideMenu.navRigthBtn.backgroundColor = [UIColor clearColor];
+    //slideMenu.mainView.backgroundColor = [UIColor lightGrayColor];
+    
+    //  比如添加一个titleView的文字
+    UILabel *titleLb = [[UILabel alloc]initWithFrame:slideMenu.titleView.bounds];
+    titleLb.text = @"SlideMenu";
+    [slideMenu.titleView addSubview:titleLb];
+    
+    
+    leftViewController *leftView = [[leftViewController alloc] init];
+    
+    [slideMenu.leftMenuView addSubview:leftView.view];
+
+    
+//    rightViewController *rightView = [[rightViewController alloc] init];
+//    
+//    [slideMenu.rightMenuView addSubview:rightView.view];
+    
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self setupSlide];
+    
     
     //Set ExceptionHandler
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
     // 初始化
-    [XZLog initLog];
+//    [XZLog initLog];
+//    
+//    // 设置保存多少天的数据，多余就删除。
+//    [XZLog setNumberOfDaysToDelete:5];
+//    
+//    // 测试用例
+//    FDLog(@"header", @"iOS", @"抢先预定了喂");
+//    
+//    Product_Custom *pC = [[Product_Custom alloc] init];
+//    [pC product_cunstom_test];
+//    
+//    
+//    
+//    SpeakerView *vc = [[SpeakerView alloc] initWithFrame:CGRectMake(0, 10, 60, 100)];
+//    
+//   // vc.center = self.view.center;
+//    
+//    [self.view addSubview:vc];
+//    
+//    
+//    shadowView *view = [[shadowView alloc] initWithFrame:CGRectMake(100, 120, 100,100)];
+//    view.backgroundColor = [UIColor clearColor];
+//    [self.view addSubview:view];
+//    
+//    [view setTapGesture:^{
+//    
+//        NSLog(@"view tap gesture");
+//        
+//        [self performSegueWithIdentifier:@"goNext" sender:self];
+//    
+//    }];
+//    
+//    SEL sel = @selector(onClickedBtn:);
+//    NSLog(@" SEL : %p", sel);
+//    
+//    
+//    NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
+//    ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(100, 200, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
+//    [btn setTitle:@"测试button" forState:UIControlStateNormal];
+//    
+//    [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
+////    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+////    btn.layer.shadowOffset = CGSizeMake(3, 3);
+////    btn.layer.shadowColor = [UIColor grayColor].CGColor;
+////    btn.layer.shadowOpacity = 0.8;
+//    
+//    [self.view addSubview:btn];
     
-    // 设置保存多少天的数据，多余就删除。
-    [XZLog setNumberOfDaysToDelete:5];
     
-    // 测试用例
-    FDLog(@"header", @"iOS", @"抢先预定了喂");
+    ObjectArchive *object = [[ObjectArchive alloc] initWithName:@"Joke" Age:@"123" Career:@"engineer"];
     
-    Product_Custom *pC = [[Product_Custom alloc] init];
-    [pC product_cunstom_test];
+    NSData *objectData = [NSKeyedArchiver archivedDataWithRootObject:object];
     
+    NSLog(@"objectData is %@", objectData);
     
+    ObjectArchive *anotherObject = [NSKeyedUnarchiver unarchiveObjectWithData:objectData];
     
-    SpeakerView *vc = [[SpeakerView alloc] initWithFrame:CGRectMake(0, 10, 60, 100)];
+    ObjectArchive *objectCopy = [anotherObject copy];
     
-   // vc.center = self.view.center;
+    NSLog(@"name is %@, age is %@, career is %@", objectCopy.ObjectName, objectCopy.ObjectAge, objectCopy.ObjectCareer);
     
-    [self.view addSubview:vc];
-    
-    
-    shadowView *view = [[shadowView alloc] initWithFrame:CGRectMake(100, 120, 100,100)];
-    view.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:view];
-    
-    [view setTapGesture:^{
-    
-        NSLog(@"view tap gesture");
-        
-        [self performSegueWithIdentifier:@"goNext" sender:self];
-    
-    }];
-    
-    SEL sel = @selector(onClickedBtn:);
-    NSLog(@" SEL : %p", sel);
-    
-    
-    NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
-    ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(100, 200, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
-    [btn setTitle:@"测试button" forState:UIControlStateNormal];
-    
-    [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
-//    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    btn.layer.shadowOffset = CGSizeMake(3, 3);
-//    btn.layer.shadowColor = [UIColor grayColor].CGColor;
-//    btn.layer.shadowOpacity = 0.8;
-    
-    [self.view addSubview:btn];
 }
 
 - (void)onClickedBtn:(id)sender

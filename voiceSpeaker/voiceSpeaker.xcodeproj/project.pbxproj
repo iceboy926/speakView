@@ -10,13 +10,25 @@
 		1024F80E1D6158D9006F14F5 /* WMKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024F80D1D6158D9006F14F5 /* WMKeyChain.m */; };
 		1024F8121D618FC7006F14F5 /* NSObject+Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024F8111D618FC7006F14F5 /* NSObject+Caculator.m */; };
 		1024F8151D618FF0006F14F5 /* CaculateMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024F8141D618FF0006F14F5 /* CaculateMaker.m */; };
+		10256E9E1D6D38B100D136CF /* ObjectArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256E9D1D6D38B100D136CF /* ObjectArchive.m */; };
+		10256EA41D6D9A2200D136CF /* RXLSideSlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EA11D6D9A2200D136CF /* RXLSideSlipViewController.m */; };
+		10256EA51D6D9A2200D136CF /* UIViewController+RXLSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EA31D6D9A2200D136CF /* UIViewController+RXLSideMenu.m */; };
+		10256EAF1D6D9F5200D136CF /* leftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EAE1D6D9F5200D136CF /* leftViewController.m */; };
+		10256EB21D6D9F5D00D136CF /* rightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EB11D6D9F5D00D136CF /* rightViewController.m */; };
+		10256EB51D6DA0DF00D136CF /* WWSideslipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EB41D6DA0DF00D136CF /* WWSideslipViewController.m */; };
+		10256EB71D6DA14700D136CF /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10256EB61D6DA14700D136CF /* background@2x.png */; };
+		10256EBA1D6DA1CB00D136CF /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EB91D6DA1CB00D136CF /* DDMenuController.m */; };
 		1050D02A1D5C1E76002EF5CB /* CoreAnimationEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0291D5C1E76002EF5CB /* CoreAnimationEffect.m */; };
 		1050D02C1D5C1F42002EF5CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */; };
 		1050D0301D5C5207002EF5CB /* shadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D02F1D5C5207002EF5CB /* shadowView.m */; };
 		1050D0341D5C5741002EF5CB /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0331D5C5741002EF5CB /* ColorButton.m */; };
 		1050D03F1D5C7997002EF5CB /* NSObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D03E1D5C7997002EF5CB /* NSObject+AssociatedObject.m */; };
 		1050D0421D5C7D69002EF5CB /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0411D5C7D69002EF5CB /* UIAlertView+Block.m */; };
+		1050F0461D6EE06F00172460 /* WJSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050F0451D6EE06F00172460 /* WJSlideMenu.m */; };
+		1050F0491D6EE7EF00172460 /* addMore.png in Resources */ = {isa = PBXBuildFile; fileRef = 1050F0471D6EE7EF00172460 /* addMore.png */; };
+		1050F04A1D6EE7EF00172460 /* choose.png in Resources */ = {isa = PBXBuildFile; fileRef = 1050F0481D6EE7EF00172460 /* choose.png */; };
 		108D56AA1D6A95810021F7D6 /* Product_Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 108D56A91D6A95810021F7D6 /* Product_Custom.m */; };
+		10A1B5411D6C244700A3078D /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A1B5401D6C244700A3078D /* Data.m */; };
 		10AB04F81D62BA070008A9DD /* reactiveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB04F71D62BA070008A9DD /* reactiveVC.m */; };
 		10AB04FB1D62BBBB0008A9DD /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB04FA1D62BBBB0008A9DD /* UIColor+Extend.m */; };
 		10AB04FE1D62E7970008A9DD /* CocoaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AB04FD1D62E7970008A9DD /* CocoaViewController.m */; };
@@ -130,6 +142,21 @@
 		1024F8111D618FC7006F14F5 /* NSObject+Caculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Caculator.m"; sourceTree = "<group>"; };
 		1024F8131D618FF0006F14F5 /* CaculateMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculateMaker.h; sourceTree = "<group>"; };
 		1024F8141D618FF0006F14F5 /* CaculateMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculateMaker.m; sourceTree = "<group>"; };
+		10256E9C1D6D38B100D136CF /* ObjectArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectArchive.h; sourceTree = "<group>"; };
+		10256E9D1D6D38B100D136CF /* ObjectArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectArchive.m; sourceTree = "<group>"; };
+		10256EA01D6D9A2200D136CF /* RXLSideSlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLSideSlipViewController.h; sourceTree = "<group>"; };
+		10256EA11D6D9A2200D136CF /* RXLSideSlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLSideSlipViewController.m; sourceTree = "<group>"; };
+		10256EA21D6D9A2200D136CF /* UIViewController+RXLSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RXLSideMenu.h"; sourceTree = "<group>"; };
+		10256EA31D6D9A2200D136CF /* UIViewController+RXLSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RXLSideMenu.m"; sourceTree = "<group>"; };
+		10256EAD1D6D9F5200D136CF /* leftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftViewController.h; sourceTree = "<group>"; };
+		10256EAE1D6D9F5200D136CF /* leftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftViewController.m; sourceTree = "<group>"; };
+		10256EB01D6D9F5D00D136CF /* rightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rightViewController.h; sourceTree = "<group>"; };
+		10256EB11D6D9F5D00D136CF /* rightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rightViewController.m; sourceTree = "<group>"; };
+		10256EB31D6DA0DF00D136CF /* WWSideslipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSideslipViewController.h; sourceTree = "<group>"; };
+		10256EB41D6DA0DF00D136CF /* WWSideslipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWSideslipViewController.m; sourceTree = "<group>"; };
+		10256EB61D6DA14700D136CF /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		10256EB81D6DA1CB00D136CF /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
+		10256EB91D6DA1CB00D136CF /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
 		1050D0281D5C1E76002EF5CB /* CoreAnimationEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationEffect.h; sourceTree = "<group>"; };
 		1050D0291D5C1E76002EF5CB /* CoreAnimationEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationEffect.m; sourceTree = "<group>"; };
 		1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -141,8 +168,14 @@
 		1050D03E1D5C7997002EF5CB /* NSObject+AssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObject.m"; sourceTree = "<group>"; };
 		1050D0401D5C7D69002EF5CB /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
 		1050D0411D5C7D69002EF5CB /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
+		1050F0441D6EE06F00172460 /* WJSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSlideMenu.h; sourceTree = "<group>"; };
+		1050F0451D6EE06F00172460 /* WJSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJSlideMenu.m; sourceTree = "<group>"; };
+		1050F0471D6EE7EF00172460 /* addMore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addMore.png; sourceTree = "<group>"; };
+		1050F0481D6EE7EF00172460 /* choose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choose.png; sourceTree = "<group>"; };
 		108D56A81D6A95810021F7D6 /* Product_Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product_Custom.h; sourceTree = "<group>"; };
 		108D56A91D6A95810021F7D6 /* Product_Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product_Custom.m; sourceTree = "<group>"; };
+		10A1B53F1D6C244700A3078D /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		10A1B5401D6C244700A3078D /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		10AB04F61D62BA070008A9DD /* reactiveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reactiveVC.h; sourceTree = "<group>"; };
 		10AB04F71D62BA070008A9DD /* reactiveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = reactiveVC.m; sourceTree = "<group>"; };
 		10AB04F91D62BBBB0008A9DD /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
@@ -399,6 +432,32 @@
 			name = MVVM;
 			sourceTree = "<group>";
 		};
+		10256E9B1D6D37F900D136CF /* Archive&&unArchive */ = {
+			isa = PBXGroup;
+			children = (
+				10256E9C1D6D38B100D136CF /* ObjectArchive.h */,
+				10256E9D1D6D38B100D136CF /* ObjectArchive.m */,
+			);
+			name = "Archive&&unArchive";
+			sourceTree = "<group>";
+		};
+		10256E9F1D6D9A0E00D136CF /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1050F0441D6EE06F00172460 /* WJSlideMenu.h */,
+				1050F0451D6EE06F00172460 /* WJSlideMenu.m */,
+				10256EB81D6DA1CB00D136CF /* DDMenuController.h */,
+				10256EB91D6DA1CB00D136CF /* DDMenuController.m */,
+				10256EB31D6DA0DF00D136CF /* WWSideslipViewController.h */,
+				10256EB41D6DA0DF00D136CF /* WWSideslipViewController.m */,
+				10256EA01D6D9A2200D136CF /* RXLSideSlipViewController.h */,
+				10256EA11D6D9A2200D136CF /* RXLSideSlipViewController.m */,
+				10256EA21D6D9A2200D136CF /* UIViewController+RXLSideMenu.h */,
+				10256EA31D6D9A2200D136CF /* UIViewController+RXLSideMenu.m */,
+			);
+			name = SlideMenu;
+			sourceTree = "<group>";
+		};
 		1050D0271D5C1E32002EF5CB /* animationEffect */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,8 +510,20 @@
 		108D56AB1D6AA7190021F7D6 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				10A1B53F1D6C244700A3078D /* Data.h */,
+				10A1B5401D6C244700A3078D /* Data.m */,
 			);
 			name = Realm;
+			sourceTree = "<group>";
+		};
+		1095C8971D6E8A4300B6E3A8 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1050F0471D6EE7EF00172460 /* addMore.png */,
+				1050F0481D6EE7EF00172460 /* choose.png */,
+				10256EB61D6DA14700D136CF /* background@2x.png */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 		10AB04F51D62B9D90008A9DD /* ReactiveCocoa */ = {
@@ -694,6 +765,7 @@
 				1050D02B1D5C1F42002EF5CB /* QuartzCore.framework */,
 				10AFEC3F1D5B15630010B311 /* voiceSpeaker */,
 				10AFEC3E1D5B15630010B311 /* Products */,
+				D441EC58CEC656251B39578F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -708,6 +780,8 @@
 		10AFEC3F1D5B15630010B311 /* voiceSpeaker */ = {
 			isa = PBXGroup;
 			children = (
+				10256E9F1D6D9A0E00D136CF /* SlideMenu */,
+				10256E9B1D6D37F900D136CF /* Archive&&unArchive */,
 				108D56AB1D6AA7190021F7D6 /* Realm */,
 				108D56A71D6A94B20021F7D6 /* product&&Customs */,
 				10AB05001D6300080008A9DD /* Vendor */,
@@ -725,6 +799,10 @@
 				10AFEC461D5B15630010B311 /* ViewController.h */,
 				10AFEC471D5B15630010B311 /* ViewController.m */,
 				10AFEC491D5B15630010B311 /* Main.storyboard */,
+				10256EAD1D6D9F5200D136CF /* leftViewController.h */,
+				10256EAE1D6D9F5200D136CF /* leftViewController.m */,
+				10256EB01D6D9F5D00D136CF /* rightViewController.h */,
+				10256EB11D6D9F5D00D136CF /* rightViewController.m */,
 				10AFEC4C1D5B15630010B311 /* Assets.xcassets */,
 				10AFEC4E1D5B15630010B311 /* LaunchScreen.storyboard */,
 				10AFEC511D5B15630010B311 /* Info.plist */,
@@ -736,6 +814,7 @@
 		10AFEC401D5B15630010B311 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1095C8971D6E8A4300B6E3A8 /* Resource */,
 				10AFEC411D5B15630010B311 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -757,6 +836,13 @@
 				10E38F431D5DBADA009B396B /* XZLog.m */,
 			);
 			name = CrashLog;
+			sourceTree = "<group>";
+		};
+		D441EC58CEC656251B39578F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -790,6 +876,7 @@
 				TargetAttributes = {
 					10AFEC3C1D5B15630010B311 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = S4D7MKJMYK;
 					};
 				};
 			};
@@ -816,7 +903,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1050F0491D6EE7EF00172460 /* addMore.png in Resources */,
+				10256EB71D6DA14700D136CF /* background@2x.png in Resources */,
 				10AFEC501D5B15630010B311 /* LaunchScreen.storyboard in Resources */,
+				1050F04A1D6EE7EF00172460 /* choose.png in Resources */,
 				10AB05021D63002C0008A9DD /* ReactiveCocoa in Resources */,
 				10AFEC4D1D5B15630010B311 /* Assets.xcassets in Resources */,
 				10AFEC4B1D5B15630010B311 /* Main.storyboard in Resources */,
@@ -835,10 +925,13 @@
 				10AB05C71D6301D20008A9DD /* NSObject+RACDescription.m in Sources */,
 				10AB061D1D6301E40008A9DD /* RACEXTRuntimeExtensions.m in Sources */,
 				10AB05E61D6301D20008A9DD /* RACIndexSetSequence.m in Sources */,
+				10A1B5411D6C244700A3078D /* Data.m in Sources */,
+				10256E9E1D6D38B100D136CF /* ObjectArchive.m in Sources */,
 				10AB06131D6301D20008A9DD /* UISwitch+RACSignalSupport.m in Sources */,
 				10AB05D11D6301D20008A9DD /* NSURLConnection+RACSupport.m in Sources */,
 				10AB05FB1D6301D20008A9DD /* RACSubscriber.m in Sources */,
 				10AB05FE1D6301D20008A9DD /* RACTargetQueueScheduler.m in Sources */,
+				10256EB51D6DA0DF00D136CF /* WWSideslipViewController.m in Sources */,
 				10AB05C31D6301D20008A9DD /* NSIndexSet+RACSequenceAdditions.m in Sources */,
 				10AB05F21D6301D20008A9DD /* RACSequence.m in Sources */,
 				10AB06141D6301D20008A9DD /* UITableViewCell+RACSignalSupport.m in Sources */,
@@ -867,10 +960,13 @@
 				10AB05EA1D6301D20008A9DD /* RACMulticastConnection.m in Sources */,
 				10AB05CB1D6301D20008A9DD /* NSObject+RACSelectorSignal.m in Sources */,
 				10AB05C11D6301D20008A9DD /* NSEnumerator+RACSequenceAdditions.m in Sources */,
+				10256EA51D6D9A2200D136CF /* UIViewController+RXLSideMenu.m in Sources */,
 				10AB05D91D6301D20008A9DD /* RACCompoundDisposable.m in Sources */,
+				10256EA41D6D9A2200D136CF /* RXLSideSlipViewController.m in Sources */,
 				10AB05D61D6301D20008A9DD /* RACBlockTrampoline.m in Sources */,
 				10AB05D81D6301D20008A9DD /* RACCommand.m in Sources */,
 				10AB05F61D6301D20008A9DD /* RACSignalProvider.d in Sources */,
+				10256EAF1D6D9F5200D136CF /* leftViewController.m in Sources */,
 				10AB04F81D62BA070008A9DD /* reactiveVC.m in Sources */,
 				10AB06011D6301D20008A9DD /* RACTupleSequence.m in Sources */,
 				10AB05FA1D6301D20008A9DD /* RACSubject.m in Sources */,
@@ -902,11 +998,14 @@
 				10AB05FD1D6301D20008A9DD /* RACSubscriptionScheduler.m in Sources */,
 				10AB05C21D6301D20008A9DD /* NSFileHandle+RACSupport.m in Sources */,
 				10AB05DD1D6301D20008A9DD /* RACDynamicSequence.m in Sources */,
+				10256EB21D6D9F5D00D136CF /* rightViewController.m in Sources */,
 				1024F80E1D6158D9006F14F5 /* WMKeyChain.m in Sources */,
 				10AB05C51D6301D20008A9DD /* NSNotificationCenter+RACSupport.m in Sources */,
 				10AB04FB1D62BBBB0008A9DD /* UIColor+Extend.m in Sources */,
 				10AB06051D6301D20008A9DD /* UIActionSheet+RACSignalSupport.m in Sources */,
 				10E38F441D5DBADA009B396B /* XZLog.m in Sources */,
+				10256EBA1D6DA1CB00D136CF /* DDMenuController.m in Sources */,
+				1050F0461D6EE06F00172460 /* WJSlideMenu.m in Sources */,
 				10AB060A1D6301D20008A9DD /* UIControl+RACSignalSupport.m in Sources */,
 				10AB05D71D6301D20008A9DD /* RACChannel.m in Sources */,
 				1050D0421D5C7D69002EF5CB /* UIAlertView+Block.m in Sources */,
@@ -981,6 +1080,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1050,15 +1150,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/voiceSpeaker",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = voiceSpeaker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mit.voiceSpeaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kingyh.voiceSpeaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1066,15 +1173,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/voiceSpeaker",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = voiceSpeaker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mit.voiceSpeaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kingyh.voiceSpeaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

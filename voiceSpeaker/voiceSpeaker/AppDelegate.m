@@ -7,6 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "RXLSideSlipViewController.h"
+#import "UIViewController+RXLSideMenu.h"
+#import "leftViewController.h"
+#import "rightViewController.h"
+#import "ViewController.h"
+#import "WWSideslipViewController.h"
+#import "DDMenuController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +23,65 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    UIWindow *window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = window;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     // Override point for customization after application launch.
+//    
+//    leftViewController *left = [[leftViewController alloc] init];
+//    rightViewController *right = [[rightViewController alloc] init];
+//    
+    
+//    
+//    RXLSideSlipViewController *RXL = [[RXLSideSlipViewController alloc] initWithContentViewController:viewContro leftMenuViewController:left rightMenuViewController:right];
+//    
+//    
+//    //RXL.backgroundImage = [UIImage imageNamed:@"aaa.png"];
+//    //RXL.delegate = self;
+//    
+//    RXL.menuPreferredStatusBarStyle = 1; // UIStatusBarStyleLightContent
+//    RXL.contentViewShadowColor = [UIColor whiteColor];
+//    RXL.contentViewShadowOffset = CGSizeMake(0, 0);
+//    RXL.contentViewShadowOpacity = 0.6;
+//    RXL.contentViewShadowRadius = 12;
+//    RXL.contentViewShadowEnabled = NO; // 是否显示阴影
+//    RXL.contentPrefersStatusBarHidden = NO;//是否隐藏主视图的状态条
+    
+    ViewController *viewContro = [[ViewController alloc] init];
+//    
+    UINavigationController *navigate = [[UINavigationController alloc] initWithRootViewController:viewContro];
+    
+    
+    self.window.rootViewController = navigate;
+    
+//    WWSideslipViewController * slide = [[WWSideslipViewController alloc]initWithLeftView:left andMainView:viewContro andRightView:right andBackgroundImage:[UIImage imageNamed:@"background"]];
+//    
+//    //滑动速度系数
+//    [slide setSpeedf:0.7];
+//    
+//    //点击视图是是否恢复位置
+//    slide.sideslipTapGes.enabled = YES;
+//    
+//    self.window.rootViewController = slide;
+    
+    
+    
+//    DDMenuController*ddMenu = [[DDMenuController alloc] initWithRootViewController:viewContro];
+//    
+//    //SideslipViewController *left = [[SideslipViewController alloc] init];
+//    ddMenu.leftViewController = left;
+//    
+//    //SideslipRightViewController *right = [[SideslipRightViewController alloc] init];
+//    ddMenu.rightViewController = right;
+//    
+//    UINavigationController *navigate = [[UINavigationController alloc] initWithRootViewController:ddMenu];
+//    
+//    self.window.rootViewController = navigate;
+    
     return YES;
 }
 
