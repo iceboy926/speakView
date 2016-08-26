@@ -27,7 +27,7 @@
     self = [super initWithFrame:frame];
     if(self)
     {
-        NSArray *array = @[@"menu1",@"menu2",@"menu3",@"menu4",@"menu5",@"menu6",@"menu7",@"menu8",@"menu9",@"menu10"];
+        NSArray *array = @[@"menu1",@"menu2",@"menu3",@"menu4",@"menu5"];
         [self.dataSource addObjectsFromArray:array];
         
         
@@ -35,18 +35,22 @@
         
         UITableView *table = [[UITableView alloc] initWithFrame:rectframe];
         table.delegate = self;
+        table.backgroundColor = [UIColor clearColor];
         table.dataSource = self;
+        table.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         [self addSubview:table];
         
+        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"leftbackiamge"]];
         
-        NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
-        ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(0, 0, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
-        [btn setTitle:@"测试button" forState:UIControlStateNormal];
         
-        [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
-        
-        [self addSubview:btn];
+//        NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
+//        ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(0, 0, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
+//        [btn setTitle:@"测试button" forState:UIControlStateNormal];
+//        
+//        [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
+//        
+//        [self addSubview:btn];
 
     }
     
@@ -77,13 +81,14 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     
-    //cell.backgroundColor = [UIColor brownColor];
+    cell.backgroundColor = [UIColor clearColor];
     
-    //cell.selectionStyle = UITableViewCellAccessoryNone;
+    cell.selectionStyle = UITableViewCellAccessoryNone;
     
     cell.textLabel.text = self.dataSource[indexPath.row];
     
-    //cell.textLabel.textColor = [UIColor redColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont systemFontOfSize:16.0];
     NSLog(@"cell text is %@", cell.textLabel.text);
     return cell;
 }
