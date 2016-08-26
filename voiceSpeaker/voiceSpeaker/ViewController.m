@@ -20,8 +20,7 @@
 #import "Product_Custom.h"
 #import "ObjectArchive.h"
 #import "WJSlideMenu.h"
-#import "leftViewController.h"
-#import "rightViewController.h"
+#import "leftView.h"
 
 @interface ViewController ()
 {
@@ -92,9 +91,17 @@ void uncaughtExceptionHandler(NSException *exception){
     [slideMenu.titleView addSubview:titleLb];
     
     
-    leftViewController *leftView = [[leftViewController alloc] init];
+    leftView *left = [[leftView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    [slideMenu.leftMenuView addSubview:leftView.view];
+    [slideMenu.leftMenuView addSubview:left];
+    
+    left.blockmenu = ^(UIViewController *vc){
+    
+        [self.navigationController pushViewController:vc animated:YES];
+        
+        [slideMenu closeLeftMenuView];
+    
+    };
 
     
 //    rightViewController *rightView = [[rightViewController alloc] init];
@@ -108,7 +115,7 @@ void uncaughtExceptionHandler(NSException *exception){
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    //self.view.backgroundColor = [UIColor clearColor];
     
     [self setupSlide];
     

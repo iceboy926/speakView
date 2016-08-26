@@ -7,6 +7,7 @@
 //
 
 #import "leftViewController.h"
+#import "ColorButton.h"
 
 @interface leftViewController () <UITableViewDataSource, UITableViewDelegate>
 {
@@ -23,18 +24,36 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    //self.view.backgroundColor = [UIColor lightGrayColor];
     
-    table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    // 创建dataSource
+    NSArray *array = @[@"menu1",@"menu2",@"menu3",@"menu4",@"menu5",@"menu6",@"menu7",@"menu8",@"menu9",@"menu10"];
+    [self.dataSource addObjectsFromArray:array];
+    
+    
+    CGRect rectframe = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height);
+    
+    table = [[UITableView alloc] initWithFrame:rectframe];
     table.delegate = self;
     table.dataSource = self;
     
     [self.view addSubview:table];
     
     
-    // 创建dataSource
-    NSArray *array = @[@"menu1",@"menu2",@"menu3",@"menu4",@"menu5",@"menu6",@"menu7",@"menu8",@"menu9",@"menu10"];
-    [self.dataSource addObjectsFromArray:array];
+        NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
+        ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(0, 0, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
+        [btn setTitle:@"测试button" forState:UIControlStateNormal];
+    
+        [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
+    //    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //    btn.layer.shadowOffset = CGSizeMake(3, 3);
+    //    btn.layer.shadowColor = [UIColor grayColor].CGColor;
+    //    btn.layer.shadowOpacity = 0.8;
+    
+        [self.view addSubview:btn];
+    
+    
+
     
     
 }
@@ -66,7 +85,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataSource.count;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -75,12 +94,18 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
-    cell.selectionStyle = UITableViewCellAccessoryNone;
+    
+    cell.backgroundColor = [UIColor brownColor];
+    
+    //cell.selectionStyle = UITableViewCellAccessoryNone;
     
     cell.textLabel.text = self.dataSource[indexPath.row];
+    
+    cell.textLabel.textColor = [UIColor redColor];
     NSLog(@"cell text is %@", cell.textLabel.text);
     return cell;
 }
+
 
 /*
 #pragma mark - Navigation

@@ -13,7 +13,6 @@
 		10256E9E1D6D38B100D136CF /* ObjectArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256E9D1D6D38B100D136CF /* ObjectArchive.m */; };
 		10256EA41D6D9A2200D136CF /* RXLSideSlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EA11D6D9A2200D136CF /* RXLSideSlipViewController.m */; };
 		10256EA51D6D9A2200D136CF /* UIViewController+RXLSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EA31D6D9A2200D136CF /* UIViewController+RXLSideMenu.m */; };
-		10256EAF1D6D9F5200D136CF /* leftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EAE1D6D9F5200D136CF /* leftViewController.m */; };
 		10256EB21D6D9F5D00D136CF /* rightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EB11D6D9F5D00D136CF /* rightViewController.m */; };
 		10256EB51D6DA0DF00D136CF /* WWSideslipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EB41D6DA0DF00D136CF /* WWSideslipViewController.m */; };
 		10256EB71D6DA14700D136CF /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10256EB61D6DA14700D136CF /* background@2x.png */; };
@@ -131,6 +130,7 @@
 		10AFEC4D1D5B15630010B311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10AFEC4C1D5B15630010B311 /* Assets.xcassets */; };
 		10AFEC501D5B15630010B311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10AFEC4E1D5B15630010B311 /* LaunchScreen.storyboard */; };
 		10AFEC591D5B158B0010B311 /* SpeakerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AFEC581D5B158B0010B311 /* SpeakerView.m */; };
+		10C00BFD1D6FE52900659ED3 /* leftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00BFC1D6FE52900659ED3 /* leftView.m */; };
 		10E38F401D5D7770009B396B /* UIView+tapGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E38F3F1D5D7770009B396B /* UIView+tapGesture.m */; };
 		10E38F441D5DBADA009B396B /* XZLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E38F431D5DBADA009B396B /* XZLog.m */; };
 /* End PBXBuildFile section */
@@ -148,8 +148,6 @@
 		10256EA11D6D9A2200D136CF /* RXLSideSlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLSideSlipViewController.m; sourceTree = "<group>"; };
 		10256EA21D6D9A2200D136CF /* UIViewController+RXLSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RXLSideMenu.h"; sourceTree = "<group>"; };
 		10256EA31D6D9A2200D136CF /* UIViewController+RXLSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RXLSideMenu.m"; sourceTree = "<group>"; };
-		10256EAD1D6D9F5200D136CF /* leftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftViewController.h; sourceTree = "<group>"; };
-		10256EAE1D6D9F5200D136CF /* leftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftViewController.m; sourceTree = "<group>"; };
 		10256EB01D6D9F5D00D136CF /* rightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rightViewController.h; sourceTree = "<group>"; };
 		10256EB11D6D9F5D00D136CF /* rightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rightViewController.m; sourceTree = "<group>"; };
 		10256EB31D6DA0DF00D136CF /* WWSideslipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWSideslipViewController.h; sourceTree = "<group>"; };
@@ -385,6 +383,8 @@
 		10AFEC511D5B15630010B311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10AFEC571D5B158B0010B311 /* SpeakerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerView.h; sourceTree = "<group>"; };
 		10AFEC581D5B158B0010B311 /* SpeakerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerView.m; sourceTree = "<group>"; };
+		10C00BFB1D6FE52900659ED3 /* leftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftView.h; sourceTree = "<group>"; };
+		10C00BFC1D6FE52900659ED3 /* leftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftView.m; sourceTree = "<group>"; };
 		10E38F3E1D5D7770009B396B /* UIView+tapGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+tapGesture.h"; sourceTree = "<group>"; };
 		10E38F3F1D5D7770009B396B /* UIView+tapGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+tapGesture.m"; sourceTree = "<group>"; };
 		10E38F421D5DBADA009B396B /* XZLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZLog.h; sourceTree = "<group>"; };
@@ -799,8 +799,8 @@
 				10AFEC461D5B15630010B311 /* ViewController.h */,
 				10AFEC471D5B15630010B311 /* ViewController.m */,
 				10AFEC491D5B15630010B311 /* Main.storyboard */,
-				10256EAD1D6D9F5200D136CF /* leftViewController.h */,
-				10256EAE1D6D9F5200D136CF /* leftViewController.m */,
+				10C00BFB1D6FE52900659ED3 /* leftView.h */,
+				10C00BFC1D6FE52900659ED3 /* leftView.m */,
 				10256EB01D6D9F5D00D136CF /* rightViewController.h */,
 				10256EB11D6D9F5D00D136CF /* rightViewController.m */,
 				10AFEC4C1D5B15630010B311 /* Assets.xcassets */,
@@ -966,7 +966,6 @@
 				10AB05D61D6301D20008A9DD /* RACBlockTrampoline.m in Sources */,
 				10AB05D81D6301D20008A9DD /* RACCommand.m in Sources */,
 				10AB05F61D6301D20008A9DD /* RACSignalProvider.d in Sources */,
-				10256EAF1D6D9F5200D136CF /* leftViewController.m in Sources */,
 				10AB04F81D62BA070008A9DD /* reactiveVC.m in Sources */,
 				10AB06011D6301D20008A9DD /* RACTupleSequence.m in Sources */,
 				10AB05FA1D6301D20008A9DD /* RACSubject.m in Sources */,
@@ -977,6 +976,7 @@
 				10AB05CD1D6301D20008A9DD /* NSSet+RACSequenceAdditions.m in Sources */,
 				10AB05EF1D6301D20008A9DD /* RACReturnSignal.m in Sources */,
 				10AB06161D6301D20008A9DD /* UITextField+RACSignalSupport.m in Sources */,
+				10C00BFD1D6FE52900659ED3 /* leftView.m in Sources */,
 				10AB05EB1D6301D20008A9DD /* RACObjCRuntime.m in Sources */,
 				10AFEC591D5B158B0010B311 /* SpeakerView.m in Sources */,
 				10AB05DC1D6301D20008A9DD /* RACDisposable.m in Sources */,
