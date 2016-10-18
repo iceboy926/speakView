@@ -14,6 +14,32 @@
 #import "ViewController.h"
 #import "WWSideslipViewController.h"
 #import "DDMenuController.h"
+#import <notify.h>
+
+#define NotificationLock CFSTR("com.apple.springboard.lockcomplete")
+#define NotificationChange CFSTR("com.apple.springboard.lockstate")
+#define NotificationPwdUI CFSTR("com.apple.springboard.hasBlankedScreen")
+
+
+static void screenLockStateChanged(CFNotificationCenterRef center,void* observer,CFStringRef name,const void* object,CFDictionaryRef userInfo)
+
+{
+    
+    NSString* lockstate = (__bridge NSString*)name;
+    
+    NSLog(@"lockstate is %@", lockstate);
+    
+    if ([lockstate isEqualToString:(__bridge  NSString*)NotificationLock]) {
+        
+        NSLog(@"locked.");
+        
+    } else {
+        
+        NSLog(@"lock state changed.");
+        
+    }
+    
+}
 
 @interface AppDelegate ()
 
@@ -30,57 +56,16 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    // Override point for customization after application launch.
-//    
-    leftViewController *left = [[leftViewController alloc] init];
-    rightViewController *right = [[rightViewController alloc] init];
-//    
     ViewController *viewContro = [[ViewController alloc] init];
-//    
-    RXLSideSlipViewController *RXL = [[RXLSideSlipViewController alloc] initWithContentViewController:viewContro leftMenuViewController:left rightMenuViewController:right];
-//    
-//    
-    RXL.backgroundImage = [UIImage imageNamed:@"leftbackiamge"];
-//    //RXL.delegate = self;
-//    
-    RXL.menuPreferredStatusBarStyle = 1; // UIStatusBarStyleLightContent
-    RXL.contentViewShadowColor = [UIColor whiteColor];
-    RXL.contentViewShadowOffset = CGSizeMake(0, 0);
-    RXL.contentViewShadowOpacity = 0.6;
-    RXL.contentViewShadowRadius = 12;
-    RXL.contentViewShadowEnabled = NO; // 是否显示阴影
-    RXL.contentPrefersStatusBarHidden = NO;//是否隐藏主视图的状态条
+ 
+    UINavigationController *navigate = [[UINavigationController alloc] initWithRootViewController:viewContro];
     
+    self.window.rootViewController = navigate;
+
     
-//    
-//    UINavigationController *navigate = [[UINavigationController alloc] initWithRootViewController:viewContro];
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, screenLockStateChanged, NotificationLock, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
     
-    
-    self.window.rootViewController = viewContro;
-    
-//    WWSideslipViewController * slide = [[WWSideslipViewController alloc]initWithLeftView:left andMainView:viewContro andRightView:right andBackgroundImage:[UIImage imageNamed:@"background"]];
-//    
-//    //滑动速度系数
-//    [slide setSpeedf:0.7];
-//    
-//    //点击视图是是否恢复位置
-//    slide.sideslipTapGes.enabled = YES;
-//    
-//    self.window.rootViewController = slide;
-    
-    
-    
-//    DDMenuController*ddMenu = [[DDMenuController alloc] initWithRootViewController:viewContro];
-////    
-////
-//    ddMenu.leftViewController = left;
-////    
-////
-//    ddMenu.rightViewController = right;
-////    
-//    UINavigationController *navigate = [[UINavigationController alloc] initWithRootViewController:ddMenu];
-////    
-//    self.window.rootViewController = navigate;
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, screenLockStateChanged, NotificationChange, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
     
     return YES;
 }

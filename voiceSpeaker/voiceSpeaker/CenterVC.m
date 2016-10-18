@@ -1,24 +1,28 @@
 //
-//  rightViewController.m
+//  CenterViewController.m
 //  voiceSpeaker
 //
-//  Created by 金玉衡 on 16/8/24.
+//  Created by 金玉衡 on 16/8/29.
 //  Copyright © 2016年 mit. All rights reserved.
 //
 
-#import "rightViewController.h"
+#import "CenterVC.h"
+#import "UIImage+xhImageName.h"
 
-@interface rightViewController ()
+@interface CenterVC ()
 
 @end
 
-@implementation rightViewController
+@implementation CenterVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    UIImageView *imageVC = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
+    imageVC.image = [UIImage imageNamed:@"anddy"];
     
-    self.view.backgroundColor = [UIColor colorWithRed:0.462 green:0.119 blue:0.667 alpha:1.000];
+    [self.view addSubview:imageVC];
+    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

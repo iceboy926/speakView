@@ -25,12 +25,20 @@
 #import <objc/runtime.h>
 #import "LeftSlideViewController.h"
 #import "leftViewController.h"
+#import "rightViewController.h"
+#import "CenterVC.h"
+#import "UIImage+xhImageName.h"
+
+#define SLIDE_OFFSET   180
 
 
 @interface ViewController ()
 {
     WJSlideMenu *slideMenu;
     LeftSlideViewController *leftSlideMenu;
+    CenterVC *centerVC;
+    leftViewController  *leftVC;
+    rightViewController *rightVC;
 }
 
 @end
@@ -126,13 +134,45 @@ void uncaughtExceptionHandler(NSException *exception){
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //self.view.backgroundColor = [UIColor clearColor];
+    UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+
+    centerVC = [mainSB instantiateViewControllerWithIdentifier:@"CenterVC"];
+    leftVC = [mainSB instantiateViewControllerWithIdentifier:@"leftViewController"];
+    rightVC = [mainSB instantiateViewControllerWithIdentifier:@"rightViewController"];
     
-     //[self setupSlide];
+    [self.view addSubview:centerVC.view];
+    [centerVC.view setTag:1];
+    [centerVC.view setFrame:self.view.bounds];
+    
+    [self.view addSubview:leftVC.view];
+    [leftVC.view setTag:2];
+    [leftVC.view setFrame:self.view.bounds];
+    
+    [self.view addSubview:rightVC.view];
+    [rightVC.view setTag:3];
+    [rightVC.view setFrame:self.view.bounds];
+    
+    [self.view bringSubviewToFront:centerVC.view];
+    
+    UISwipeGestureRecognizer *swipeGestureRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
+    
+    [swipeGestureRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    
+    [self.view addGestureRecognizer:swipeGestureRight];
+    
+    UISwipeGestureRecognizer *swiperGestureLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
+    
+    [swiperGestureLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    
+    [self.view addGestureRecognizer:swiperGestureLeft];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
+    
+    [self.view addGestureRecognizer:tapGesture];
     
     
     //Set ExceptionHandler
-    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    //NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
     // 初始化
 //    [XZLog initLog];
@@ -163,7 +203,7 @@ void uncaughtExceptionHandler(NSException *exception){
     
         NSLog(@"view tap gesture");
         
-        [self performSegueWithIdentifier:@"goNext" sender:self];
+        //[self performSegueWithIdentifier:@"goNext" sender:self];
     
     }];
 //
@@ -171,17 +211,17 @@ void uncaughtExceptionHandler(NSException *exception){
 //    NSLog(@" SEL : %p", sel);
 //    
 //    
-    NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
-    ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(100, 200, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
-    [btn setTitle:@"测试button" forState:UIControlStateNormal];
-    
-    [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
-//    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    btn.layer.shadowOffset = CGSizeMake(3, 3);
-//    btn.layer.shadowColor = [UIColor grayColor].CGColor;
-//    btn.layer.shadowOpacity = 0.8;
-    
-    [self.view addSubview:btn];
+//    NSMutableArray *colorArray = [@[[UIColor colorWithRed:0.6 green:0.278 blue:0.757 alpha:1],[UIColor colorWithRed:0.614 green:0.612 blue:0.843 alpha:1]] mutableCopy];
+//    ColorButton *btn = [[ColorButton alloc]initWithFrame:CGRectMake(100, 200, 150, 50) FromColorArray:colorArray ByGradientType:topToBottom];
+//    [btn setTitle:@"测试button" forState:UIControlStateNormal];
+//    
+//    [btn addTarget:self action:@selector(onClickedBtn:) forControlEvents:UIControlEventTouchUpInside];
+////    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+////    btn.layer.shadowOffset = CGSizeMake(3, 3);
+////    btn.layer.shadowColor = [UIColor grayColor].CGColor;
+////    btn.layer.shadowOpacity = 0.8;
+//    
+//    [self.view addSubview:btn];
     
     
     ObjectArchive *object = [[ObjectArchive alloc] initWithName:@"Joke" Age:@"123" Career:@"engineer"];
@@ -195,9 +235,55 @@ void uncaughtExceptionHandler(NSException *exception){
     ObjectArchive *objectCopy = [anotherObject copy];
     
     NSLog(@"name is %@, age is %@, career is %@", objectCopy.ObjectName, objectCopy.ObjectAge, objectCopy.ObjectCareer);
+
+}
+
+- (void)tapGesture:(UITapGestureRecognizer *)tapGesture
+{
+    UISwipeGestureRecognizer *gesture = [[UISwipeGestureRecognizer alloc] init];
+    gesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self performSelector:@selector(swipeView:) withObject:gesture];
     
-   
+}
+
+- (void)swipeView:(UISwipeGestureRecognizer *)gesture
+{
     
+    CALayer *layer = [centerVC.view layer];
+    layer.shadowColor = [UIColor blackColor].CGColor;
+    layer.shadowOffset = CGSizeMake(1, 1);
+    layer.shadowOpacity = 1;
+    layer.shadowRadius = 20.0;
+ 
+    
+    if(gesture.direction == UISwipeGestureRecognizerDirectionRight)
+    {
+        [leftVC.view setHidden:NO];
+        [rightVC.view setHidden:YES];
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+        if (centerVC.view.frame.origin.x == self.view.frame.origin.x || centerVC.view.frame.origin.x == -SLIDE_OFFSET) {
+            [centerVC.view setFrame:CGRectMake(centerVC.view.frame.origin.x+SLIDE_OFFSET, centerVC.view.frame.origin.y, centerVC.view.frame.size.width, centerVC.view.frame.size.height)];
+        }
+        
+        [UIView commitAnimations];
+
+    }
+    else if(gesture.direction == UISwipeGestureRecognizerDirectionLeft)
+    {
+        [rightVC.view setHidden:NO];
+        [leftVC.view setHidden:YES];
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+        if (centerVC.view.frame.origin.x == self.view.frame.origin.x || centerVC.view.frame.origin.x == SLIDE_OFFSET) {
+            [centerVC.view setFrame:CGRectMake(centerVC.view.frame.origin.x-SLIDE_OFFSET, centerVC.view.frame.origin.y, centerVC.view.frame.size.width, centerVC.view.frame.size.height)];
+        }
+        
+        [UIView commitAnimations];
+
+    }
 }
 
 - (void)testSwizzle
@@ -217,13 +303,13 @@ void uncaughtExceptionHandler(NSException *exception){
 
 - (void)onClickedBtn:(id)sender
 {
-//    UIAlertView *view = [[UIAlertView alloc] initWithTitle:nil message:@"this is a message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//    
-//    [view showAlertViewWithCompleteBlock:^(NSInteger buttonIndex){
-//    
-//        NSLog(@" clicked %d button", buttonIndex);
-//    
-//    }];
+    UIAlertView *view = [[UIAlertView alloc] initWithTitle:nil message:@"this is a message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
+    [view showAlertViewWithCompleteBlock:^(NSInteger buttonIndex){
+    
+        NSLog(@" clicked %d button", buttonIndex);
+    
+    }];
     
     int result = [NSObject makeCaculators:^(CaculateMaker *maker) {
        

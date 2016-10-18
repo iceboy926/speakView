@@ -31,7 +31,6 @@ static char *kDTActionHandlerTapBlockKey = "blockKeys";
     }
     
     
-    
     objc_setAssociatedObject(self, &kDTActionHandlerTapBlockKey, block, OBJC_ASSOCIATION_COPY);
 
 }

@@ -30,10 +30,24 @@
             </objects>
             <point key="canvasLocation" x="594" y="260"/>
         </scene>
+        <!--CenterVC-->
+        <scene sceneID="t0q-cd-s7Z">
+            <objects>
+                <viewController storyboardIdentifier="CenterVC" id="nlu-tR-74f" customClass="CenterVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cYM-3W-y32">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09j-2h-Kce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="-352"/>
+        </scene>
         <!--Right View Controller-->
         <scene sceneID="GsA-jk-24L">
             <objects>
-                <viewController id="sLW-uA-Mgb" customClass="rightViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rightViewController" id="sLW-uA-Mgb" customClass="rightViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XhC-LE-wFQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +61,7 @@
         <!--Left View Controller-->
         <scene sceneID="KQ8-E0-cWX">
             <objects>
-                <viewController id="KFJ-Xs-Vh3" customClass="leftViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leftViewController" id="KFJ-Xs-Vh3" customClass="leftViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W2Y-cv-9Bi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

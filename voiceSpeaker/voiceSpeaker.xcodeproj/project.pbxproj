@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101672151DB5ED1D007E49F4 /* UIImage+xhImageName.m in Sources */ = {isa = PBXBuildFile; fileRef = 101672141DB5ED1D007E49F4 /* UIImage+xhImageName.m */; };
+		101672181DB5F00C007E49F4 /* anddy_os7.png in Resources */ = {isa = PBXBuildFile; fileRef = 101672161DB5F00C007E49F4 /* anddy_os7.png */; };
+		1016721B1DB5F164007E49F4 /* anddy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1016721A1DB5F164007E49F4 /* anddy@2x.png */; };
 		1024F80E1D6158D9006F14F5 /* WMKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024F80D1D6158D9006F14F5 /* WMKeyChain.m */; };
 		1024F8121D618FC7006F14F5 /* NSObject+Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024F8111D618FC7006F14F5 /* NSObject+Caculator.m */; };
 		1024F8151D618FF0006F14F5 /* CaculateMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024F8141D618FF0006F14F5 /* CaculateMaker.m */; };
@@ -24,7 +27,6 @@
 		1050D03F1D5C7997002EF5CB /* NSObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D03E1D5C7997002EF5CB /* NSObject+AssociatedObject.m */; };
 		1050D0421D5C7D69002EF5CB /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0411D5C7D69002EF5CB /* UIAlertView+Block.m */; };
 		1050F0461D6EE06F00172460 /* WJSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050F0451D6EE06F00172460 /* WJSlideMenu.m */; };
-		1050F0491D6EE7EF00172460 /* addMore.png in Resources */ = {isa = PBXBuildFile; fileRef = 1050F0471D6EE7EF00172460 /* addMore.png */; };
 		1050F04A1D6EE7EF00172460 /* choose.png in Resources */ = {isa = PBXBuildFile; fileRef = 1050F0481D6EE7EF00172460 /* choose.png */; };
 		108D56AA1D6A95810021F7D6 /* Product_Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 108D56A91D6A95810021F7D6 /* Product_Custom.m */; };
 		10A1B5411D6C244700A3078D /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A1B5401D6C244700A3078D /* Data.m */; };
@@ -136,11 +138,16 @@
 		10C00BFF1D6FF03200659ED3 /* leftbackiamge.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C00BFE1D6FF03200659ED3 /* leftbackiamge.png */; };
 		10C00C031D70177A00659ED3 /* NSArray+swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00C021D70177A00659ED3 /* NSArray+swizzle.m */; };
 		10C00C081D7022F200659ED3 /* leftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00C071D7022F200659ED3 /* leftViewController.m */; };
+		10CB38A71D7413FF008BAA9A /* CenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB38A61D7413FF008BAA9A /* CenterVC.m */; };
 		10E38F401D5D7770009B396B /* UIView+tapGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E38F3F1D5D7770009B396B /* UIView+tapGesture.m */; };
 		10E38F441D5DBADA009B396B /* XZLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E38F431D5DBADA009B396B /* XZLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		101672131DB5ED1D007E49F4 /* UIImage+xhImageName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+xhImageName.h"; sourceTree = "<group>"; };
+		101672141DB5ED1D007E49F4 /* UIImage+xhImageName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+xhImageName.m"; sourceTree = "<group>"; };
+		101672161DB5F00C007E49F4 /* anddy_os7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anddy_os7.png; sourceTree = "<group>"; };
+		1016721A1DB5F164007E49F4 /* anddy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "anddy@2x.png"; sourceTree = "<group>"; };
 		1024F80C1D6158D9006F14F5 /* WMKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyChain.h; sourceTree = "<group>"; };
 		1024F80D1D6158D9006F14F5 /* WMKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyChain.m; sourceTree = "<group>"; };
 		1024F8101D618FC7006F14F5 /* NSObject+Caculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Caculator.h"; sourceTree = "<group>"; };
@@ -400,6 +407,8 @@
 		10C00C041D7020B100659ED3 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = voiceSpeaker/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		10C00C061D7022F200659ED3 /* leftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftViewController.h; sourceTree = "<group>"; };
 		10C00C071D7022F200659ED3 /* leftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftViewController.m; sourceTree = "<group>"; };
+		10CB38A51D7413FF008BAA9A /* CenterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterVC.h; sourceTree = "<group>"; };
+		10CB38A61D7413FF008BAA9A /* CenterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterVC.m; sourceTree = "<group>"; };
 		10E38F3E1D5D7770009B396B /* UIView+tapGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+tapGesture.h"; sourceTree = "<group>"; };
 		10E38F3F1D5D7770009B396B /* UIView+tapGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+tapGesture.m"; sourceTree = "<group>"; };
 		10E38F421D5DBADA009B396B /* XZLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZLog.h; sourceTree = "<group>"; };
@@ -509,6 +518,8 @@
 				1050D03E1D5C7997002EF5CB /* NSObject+AssociatedObject.m */,
 				10E38F3E1D5D7770009B396B /* UIView+tapGesture.h */,
 				10E38F3F1D5D7770009B396B /* UIView+tapGesture.m */,
+				101672131DB5ED1D007E49F4 /* UIImage+xhImageName.h */,
+				101672141DB5ED1D007E49F4 /* UIImage+xhImageName.m */,
 			);
 			name = "oc-runtime";
 			sourceTree = "<group>";
@@ -806,6 +817,7 @@
 		10AFEC3F1D5B15630010B311 /* voiceSpeaker */ = {
 			isa = PBXGroup;
 			children = (
+				10CB38A81D753455008BAA9A /* New Group */,
 				10A9E77F1D703E4B002551BE /* LeftSlideVC */,
 				10C00C001D70160100659ED3 /* Method Swizzling */,
 				10256E9F1D6D9A0E00D136CF /* SlideMenu */,
@@ -825,8 +837,12 @@
 				10AFEC431D5B15630010B311 /* AppDelegate.h */,
 				10AFEC441D5B15630010B311 /* AppDelegate.m */,
 				10AFEC461D5B15630010B311 /* ViewController.h */,
+				101672161DB5F00C007E49F4 /* anddy_os7.png */,
+				1016721A1DB5F164007E49F4 /* anddy@2x.png */,
 				10AFEC471D5B15630010B311 /* ViewController.m */,
 				10AFEC491D5B15630010B311 /* Main.storyboard */,
+				10CB38A51D7413FF008BAA9A /* CenterVC.h */,
+				10CB38A61D7413FF008BAA9A /* CenterVC.m */,
 				10C00BFB1D6FE52900659ED3 /* leftView.h */,
 				10C00BFC1D6FE52900659ED3 /* leftView.m */,
 				10C00C061D7022F200659ED3 /* leftViewController.h */,
@@ -866,6 +882,13 @@
 				10C00C021D70177A00659ED3 /* NSArray+swizzle.m */,
 			);
 			name = "Method Swizzling";
+			sourceTree = "<group>";
+		};
+		10CB38A81D753455008BAA9A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		10E38F411D5DBAC8009B396B /* CrashLog */ = {
@@ -944,14 +967,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1050F0491D6EE7EF00172460 /* addMore.png in Resources */,
 				10256EB71D6DA14700D136CF /* background@2x.png in Resources */,
 				10AFEC501D5B15630010B311 /* LaunchScreen.storyboard in Resources */,
 				10C00BFF1D6FF03200659ED3 /* leftbackiamge.png in Resources */,
 				1050F04A1D6EE7EF00172460 /* choose.png in Resources */,
 				10AB05021D63002C0008A9DD /* ReactiveCocoa in Resources */,
 				10AFEC4D1D5B15630010B311 /* Assets.xcassets in Resources */,
+				1016721B1DB5F164007E49F4 /* anddy@2x.png in Resources */,
 				10AFEC4B1D5B15630010B311 /* Main.storyboard in Resources */,
+				101672181DB5F00C007E49F4 /* anddy_os7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,6 +1034,7 @@
 				10AB05F61D6301D20008A9DD /* RACSignalProvider.d in Sources */,
 				10AB04F81D62BA070008A9DD /* reactiveVC.m in Sources */,
 				10AB06011D6301D20008A9DD /* RACTupleSequence.m in Sources */,
+				101672151DB5ED1D007E49F4 /* UIImage+xhImageName.m in Sources */,
 				10AB05FA1D6301D20008A9DD /* RACSubject.m in Sources */,
 				10AB05E91D6301D20008A9DD /* RACKVOTrampoline.m in Sources */,
 				10AB06171D6301D20008A9DD /* UITextView+RACSignalSupport.m in Sources */,
@@ -1054,6 +1079,7 @@
 				10AB060A1D6301D20008A9DD /* UIControl+RACSignalSupport.m in Sources */,
 				10AB05D71D6301D20008A9DD /* RACChannel.m in Sources */,
 				1050D0421D5C7D69002EF5CB /* UIAlertView+Block.m in Sources */,
+				10CB38A71D7413FF008BAA9A /* CenterVC.m in Sources */,
 				10AB05E01D6301D20008A9DD /* RACEmptySequence.m in Sources */,
 				10AB05E81D6301D20008A9DD /* RACKVOProxy.m in Sources */,
 				10AB06021D6301D20008A9DD /* RACUnarySequence.m in Sources */,
